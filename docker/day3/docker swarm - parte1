@@ -1,0 +1,166 @@
+### DOCKER SWARM
+
+1) Intro sobre Swarm:
+
+- gerenciamento de container usando um orquestrador (Swarm)
+- quando voce esta brincando de boa com Docker, containers nao precisa de um orquestrador.
+- agora quando voce tem containers e quer conectar com outras ferramentas e deixar mais acessivel
+para mais pessoas usarem, e fundamental que voce tenha um orquestrador (Swarm, Kubernetes)
+- com Swarm voce tera um ambiente mais seguro entre os nos.
+- ambiente em HA (se um no cair o outro vai responder e voce nao tera downtime da sua aplicacao)
+- distribuicao de carga nativa usando services entre os containers.
+-
+
+
+2) Dois papeis importantes dentro do Swarm (manager e workerr):
+
+a) manager: sabe todos os detalhes do clster, e aqui que esta toda a administracao 
+do meu cluster.
+- ele sabe onde estao todos os containers de todos os servicos.
+- ele sabe que tal aplicacao esta no no 3
+- toda informacao sensivel esta no manager.
+- tambem executa containers no manager.
+
+b) worker: somente ter containers em execucao.
+
+
+3) Qual e a resiliencia do meu cluster com Swarm (vou ter um cluster em HA com dois nos)
+
+-> cenario 1: se eu tenho dois nos e os dois sao managers, se um dos managers cair eu tambem perco meu cluster.
+-> cenario 2: se eu tenho 3 nos e os 3 sao managers e um deles cair, ai eu tenho resiliencia e fica tudo bem.
+
+
+Mas como isso funciona?
+
+- Para o cluster Swarm estar ativo e funcionando eu preciso de pelo menos 51% dos meus nodes (managers) funcionando.
+
+-> cenario 1: se eu tenho dois managers e um deles cai, eu tenho so 50% do meu cluster, do manager, ou seja, eu perco meu cluster.
+-> cenario 2: se eu tenho tres managers, e eu perco um manager, ainda terei por volta de 66% do meu cluster, por isso ele fica sadio.
+-> cenario 3: se eu tenho quatro managers, se eu perder um, tudo funciona de boa, se eu perco dois, eu perco todo o cluster.
+
+- Sempre compensa ter um numero impar de managers.
+
+-> cenario 1: se eu tenho cinco managers, e eu perco um, ainda terei 4 ex execucao, ou seja, ainda terei mais da metade de managers no cluster.
+
+- Preciso ter pelo menos 50% de managers em pe para meu cluster se manter bem e rodando.
+
+
+Mas como funciona esse esquema de eleicao no cluster Swarm?
+
+
+- quando um manager cai, rola uma eleicao, que vai eleger o proximo manager ativo.
+- se eu tuver 3 managers, um desses sera o ativo que esta trabalhando mais.
+- se eu tiver 10 nodes e todos eles forem managers, quando rolar essa eleicao, vai demorar mais tempo para ter o eleito,
+ele demora mais para eleger o manager principal e pode ocorrer downtime na aplicacao que esta rodando no meu cluster.
+
+- precisa ter uma ideia da quantidade de managers que eu preciso ter para minha aplicacao, veja:
+
+a) se eu tiver 3 managers, eu posso perder 1
+b) se eu tiver 5 managers, eu posso perder 2
+c) se eu tiver 7 managers, eu posso perder 3, sempre tendo pelo menos 50% de managers no cluster Swarm.
+
+
+### INICIANDO MEU CLUSTER SWARM:
+
+#INTRO
+
+- Alguns comandos que sao importantes do Swarm:
+
+$ docker swarm --help
+
+Usage:  docker swarm COMMAND
+
+Manage Swarm
+
+Commands:
+  ca          Display and rotate the root CA
+  init        Initialize a swarm
+  join        Join a swarm as a node and/or manager
+  join-token  Manage join tokens
+  leave       Leave the swarm
+  unlock      Unlock swarm
+  unlock-key  Manage the unlock key
+  update      Update the swarm
+
+Run 'docker swarm COMMAND --help' for more information on a command.
+
+
+#INICIALIZING
+
+1) Agora mostrando como inicializamos nosso cluster Swarm:
+
+
+$ docker swarm init --advertise-addr 192.168.0.8
+Swarm initialized: current node (qrr6r35vl08zros6bjlda5nlg) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3829pfkhroh8s7js96h2zdhi6gi5liqvfzkngv7cgasxiir3fw-8rwq5cyscylfwghhx14zbu8it 192.168.0.8:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+- veja que ele gerou um token de acesso para que voce utilize aso queria adiconar um worker no seu cluster.
+
+- veja abaixo que eu tenho apenas uma maquina leader, que e exatamente essa que eu iniciei o cluster:
+
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+qrr6r35vl08zros6bjlda5nlg *   node1      Ready     Active         Leader           20.10.0
+
+2) Agora vou usar as outras duas maquinetas que eu criei para que possamos executar os testes e incluir as maquinetas no cluster de Swarm:
+
+
+- colando o token para adiconar mais um worker, veja que ele adicionou o worker:
+
+$ docker swarm join --token SWMTKN-1-3829pfkhroh8s7js96h2zdhi6gi5liqvfzkngv7cgasxiir3fw-8rwq5cyscylfwghhx14zbu8it 192.168.0.8:2377
+This node joined a swarm as a worker.
+
+- agora se eu voltar na maquineta do Docker Engine, vou ver que um worker foi adicionado:
+
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+qrr6r35vl08zros6bjlda5nlg *   node1      Ready     Active         Leader           20.10.0
+mlct296jj114v0schoejlo8q0     node2      Ready     Active                          20.10.0
+
+
+- adicionando mais um worker no meu cluster:
+
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+qrr6r35vl08zros6bjlda5nlg *   node1      Ready     Active         Leader           20.10.0
+mlct296jj114v0schoejlo8q0     node2      Ready     Active                          20.10.0
+9nyt41g8dxu2uag5seice5x6t     node3      Ready     Active                          20.10.0
+
+- veja que tenho 3 maquinetas, sendo apenas o node1 o leader.
+
+- e agora vou promover um WORKER do meu cluster como MANAGER:
+
+$ docker node promote node2
+Node node2 promoted to a manager in the swarm.
+
+$ docker node promote node3
+Node node2 promoted to a manager in the swarm.
+
+- veja agora que tenho 3 managers no cluster:
+
+
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+qrr6r35vl08zros6bjlda5nlg *   node1      Ready     Active         Leader           20.10.0
+mlct296jj114v0schoejlo8q0     node2      Ready     Active         Reachable        20.10.0
+9nyt41g8dxu2uag5seice5x6t     node3      Ready     Active         Reachable        20.10.0
+
+3) Para sair do cluster basta usar o seguinte:
+
+$ docker node demote node2
+Manager node2 demoted in the swarm.
+
+- veja agora listando os nodes:
+
+$ docker node ls
+ID                            HOSTNAME   STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+qrr6r35vl08zros6bjlda5nlg *   node1      Ready     Active         Leader           20.10.0
+mlct296jj114v0schoejlo8q0     node2      Ready     Active                          20.10.0
+9nyt41g8dxu2uag5seice5x6t     node3      Ready     Active         Reachable        20.10.0
+
+- veja que ele mudou o manager status ali, essa maquineta esta pronta mas nao esta como manager mais, apenas worker.
