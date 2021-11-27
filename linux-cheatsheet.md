@@ -9,6 +9,28 @@ cd .. - Vai para o diretório anterior
 cd ~ - Vai para o diretório home do usúario
 cd / - Vai para o diretório raiz
 cd - - Volta para o último diretório que o usúario estava
+ls -a (arquivos ocultos)
+ls -ld (lista detalhadamente o diretório sem mostrar o conteudo)
+ls -l (lista de forma de lista os arquivos e diretórios)
+ls -h (lista de forma mais ligível mostrando o formato do arquivo ou diretório) 
+ls -lR (lista de forma recursiva cada diretório e todo o conteudo)
+ls -l aula1* (mostra tudo depois de asterisco)
+ls -l aula? ()
+ls -l aula[123] (lista aula1, aula2, aula3)
+ls -l aula[!123] (negação da lista, mostra tudo menos aula1, aula2, aula3)
+ls -l aula[1-5] (lista de uma a cinco)
+mkdir [nome_do_diretorio_desejado] - Cria um diretório com o nome desejado
+mkdir ~/[nome_do_diretorio_desejado] - Irá criar o diretório desejado na home
+rmdir [nome_diretório] - Deleta APENAS diretório vazio
+cat [arquivo_ou_caminho_arquivo] - Mostra o conteúdo do arquivo
+cat [arquivo] > [arquivo2] - Faz uma cópia do arquivo
+cat [arquivo] >> [arquivo2] - Acrescenta um arquivo ao outro
+more [nome_arquivo] - Mostra o conteúdo de um arquivo
+less [nome_arquivo] - Abre um páginador de arquivo navegável
+cp -i [arquivo_origem] [arquivo_destino] - Pergunta antes de copiar cada arquivo
+cp -R [diretorio_origem] [diretorio_destino] - Copia o diretório recursivamente
+mv [arquivo] [diretório_destino] - Move um arquivo
+mv [arquivo_antigo] [arquivo_novo] - Renomeia um arquivo
 ```
 
 ### `Linux installation`
