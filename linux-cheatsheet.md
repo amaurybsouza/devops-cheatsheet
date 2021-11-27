@@ -20,3 +20,22 @@ cd - - Volta para o último diretório que o usúario estava
 #/boot filesystem (diretório que tem o kernel, initrd, carregados pelo GRUB, )
 #swap space (é usado no windows, linux, espaço no hd que serve para uma ram temporária caso a ram principal fique completamente cheia)
 ```
+
+### `Partitions`
+
+```
+- partições comuns:
+  /home  (arquivos dos usuários, isolar numa partição, para que os dados dos usuários não cause impactos na aplicação)
+  /var   (arquivos temporários, filas de impressão, de e-mail)
+  /tmp   (arquivos temporários)
+  /boot  (bootloader, kernel, initrd, carregados pelo grub)
+  /usr   (aplicação, arquivos de aplicação, programas)
+
+- partições que podem estar fora do /
+  /etc   (arquivos de configuração do sistema, fstab)
+  /bin   (ficam os comandos, scripts, para ver as partições, ver os diretórios, processos do sistema)
+  /sbin  (ficam os comandos, scripts, para ver as partições, ver os diretórios, processos do sistema)
+  /dev
+  /proc
+  /sys
+```
