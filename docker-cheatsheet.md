@@ -1,4 +1,4 @@
-## The Git cheatsheet for DevOps community
+## Docker cheatsheet for DevOps community
 
 ### `Basic commands`
 
