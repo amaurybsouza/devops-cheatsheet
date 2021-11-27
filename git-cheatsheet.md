@@ -1,6 +1,6 @@
 ## The Git cheatsheet for DevOps community
 
-### `Basic commands`
+### `Git Basic commands`
 
 ```
 git config --global user.name "[username]" - Configura seu username do Git
@@ -11,7 +11,7 @@ git config --system core.editor [editor_de_texto] - Configura o editor de texto 
 git config --global --edit - Abre o arquivo de configuração do Git
 ```
 
-### `Branch Managing`
+### `Git Branch Managing`
 
 ```
 git branch - Lista todas as branchs locais do repositório
@@ -21,4 +21,34 @@ git checkout [nome_branch] - Muda para a branch desejada, caso não exista o Git
 git branch -d [nome_branch] - Deleta a branch desejada
 git branch -m [nome_novo] - Muda o nome da branch atual
 git merge [branch] - Faz o merge da branch atual para a branch desejada
+```
+
+### `Git Repository Setup`
+
+```
+git init [diretório] - Cria um novo repositório Git apartir de um diretório existente
+git clone [URL/repo] - Clona um repositório
+git clone [URL/repo] [diretório] - Clona um repositório dentro de um diretório específico na máquina
+git pull origin main - Atualiza o repositório local com os dados do repositório remoto
+git add . - Adiciona todas as novas mudanças do diretório atual
+git add [arquivo] - Adiciona o arquivo desejado
+git commit -m "[mensagem]" -a - Commita todas as novas mudanças
+git commit --amend - Adiciona novas mudanças ao commit anterior
+git push origin main - Atualiza o repositório remoto com os dados do repositório local
+git reset [commit] - Desfaz todos os commits apartir do commit especificado
+git reset --hard [commit] - Discarta todo histórico e mudanças para o commit especificado
+```
+
+### `Git File Managing`
+
+```
+git status - Mostra o status do diretório atual
+git log - Lista os logs da branch em que você está
+git log --all - Lista os logs de todas as branchs
+git log [branch1]..[branch2] - Compara logs das branchs desejadas
+git diff - Mostra todas mudanças que não foram commitadas
+git diff [commit1] [commit2] - Mostra a diferença entre dois commits
+git diff [branch1] [branch2] - Mostra a diferença entre duas branchs
+git diff [arquivo1] [arquivo2] - Mostra a diferença entre dois arquivos
+git show [objeto] -Mostra o conteúdo do objeto desejado
 ```
