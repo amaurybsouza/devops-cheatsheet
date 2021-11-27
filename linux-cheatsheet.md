@@ -39,3 +39,19 @@ cd - - Volta para o último diretório que o usúario estava
   /proc
   /sys
 ```
+
+### `Systems variables`
+
+```
+HISTFILE=/root/.bash_history   (caminho que armazena os comandos feitos no terminal)
+HISTFILESIZE=2000  (tamanho maximo que o arquivo terá)
+HISTSIZE=1000   (limite maximo de linhas "comandos" no arquivo)
+HOME=/root (mostra o home do usuário atual)
+HOSTNAME=souza  (hostiname da máquina)
+LOGNAME=root (mostra o nome do usuario que fez login no sistema)
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin (mostra todos os caminhos de programas do sistema)
+PWD=/home/borges/Downloads    (mostra o diretório atual)
+SHELL=/bin/bash (mostra o shell que está sendo usado)
+TERM=xterm-256color (mostra qual terminal estamos usando)
+USER=root (mostra o nome do usuário atual)
+```
