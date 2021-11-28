@@ -23,6 +23,14 @@ opcao -ti (ja iremos cair dentro do container, ele me dara um terminal + interac
 docker container attach great_snyder (para eu acessar novamente o container, usando o nome ou o ID)
 docker container run -d nginx (executa um container em modo daemon, seja iniciado em background)
 docker container exec 26484f95efd1 ls / (conecta dentro do container do nginx e roda um "ls" no / do sistema)
+docker container exec -ti 26484f95efd1 bash (vou me conectar nesse container)
+docker container stop 26484f95efd1 (parando um container)
+docker container start 26484f95efd1 (iniciando um container)
+docker container restart 26484f95efd1 (restartando um container)
+docker container rm (remove um container)
+docker container rm -f (remove um container em execucao)
+docker container top (mostra os processos em execucao)
+docker container stats (mostra informacoes de consumo de recursos como CPU/Memoria)
 ```
 
 ### `Services`
