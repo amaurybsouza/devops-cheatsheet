@@ -24,3 +24,15 @@ docker container attach great_snyder (para eu acessar novamente o container, usa
 docker container run -d nginx (executa um container em modo daemon, seja iniciado em background)
 docker container exec 26484f95efd1 ls / (conecta dentro do container do nginx e roda um "ls" no / do sistema)
 ```
+
+### `Services`
+
+```
+docker service create (cria um service)
+docker service ls (lista um service)
+docker service inspect (mostra detalhes de um service)
+docker service scale (aumenta/diminui a quantidade de replicas de um service)
+docker service ps (lista os pods de um service)
+docker service logs (mostra os logs de um service)
+docker service rm (remove um service)
+```
