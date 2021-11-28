@@ -44,3 +44,19 @@ docker service ps (lista os pods de um service)
 docker service logs (mostra os logs de um service)
 docker service rm (remove um service)
 ```
+
+### `Swarm`
+
+```
+docker swarm init (inicia um cluster de swarm)
+docker swarm join (comando para adicionar novos nodes ao cluster)
+docker node ls (lista os nodes do cluster)
+docker swarm join-token manager (lista o token para adicionar novos managers ao cluster)
+docker swarm join-token worker (lista o token para adicionar novos workers ao cluster)
+docker node inspect (mostra detalhes sobre o node)
+docker node promote (promove um node para manager)
+docker node demote (muda um node manager para worker
+docker node rm (remove um node)
+docker swarm leave (para que o node saia do cluster)
+docker swarm leave --force (para que um node manager saia do cluster)
+```
