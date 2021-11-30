@@ -58,3 +58,12 @@ ansible [server] -m user -a "name=giropops password=strigus" - Cria um usuário 
 ansible [server] -a "id giropops" - Confirma a criação no servidor
 ansible [server] -s -m user -a "name=giropops state=absent" - Deleta um usuário no servidor remoto
 ```
+
+### `Ansible playbooks [Verifying playbooks]`
+
+```
+ansible-playbook playbook.yml --list-hosts - lista todos os hosts afetados nesse playbook
+ansible-playbook playbook.yml --check - executa o playbook em modo de check sem dar apply 
+ansible-playbook playbook.yml --list-tasks - lista as tarefas do playbook
+ansible-playbook playbook.yml --syntax-check - executa uma verifcacao da sintaxe do YML para do playbook
+```
