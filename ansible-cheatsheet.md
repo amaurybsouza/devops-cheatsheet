@@ -1,4 +1,4 @@
-## Ansible cheatsheet for DevOps community
+## Ansible Ad-hoc commands
 
 ### `Basic commands`
 
@@ -58,6 +58,8 @@ ansible [server] -m user -a "name=giropops password=strigus" - Cria um usuário 
 ansible [server] -a "id giropops" - Confirma a criação no servidor
 ansible [server] -s -m user -a "name=giropops state=absent" - Deleta um usuário no servidor remoto
 ```
+
+## Ansible Playbooks
 
 ### `Ansible playbooks [Verifying playbooks]`
 
