@@ -23,5 +23,21 @@ ansible [server] -m file -a "dest=/path/to/c mode=755 owner=example group=exampl
 Cria um diretório no servidor remoto
 ansible [server] -m file -a "dest=/path/to/c state=absent" -
 Para desinstalar um pacote no servidor remoto
+```
 
+### `Ad-hoc [Manage services]`
+
+```
+ansible [server] -m service -a "name=httpd state=started" - Inicia o service desejado.
+ansible [server] -m service -a "name=httpd state=restarted" - Restarta o service desejado.
+ansible [server] -m service -a "name=httpd state=stopped" - Pausa o service desejado.
+```
+
+### `Ad-hoc [Manage packages]`
+
+```
+ansible [server] -m apt -a "name=giropops state=present" - Instala o pacote desejado no servidor
+ansible [server] -m apt -a "name=giropops-1.2 state=present" - Instala o pacote com a versão desejada
+ansible [server] -m apt -a "name=giropops state=latest" - Instala a última versão do pacote desejado
+ansible [server] -m apt -a "name=giropops state=absent" - Desinstala o pacote desejado no servidor
 ```
