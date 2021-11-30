@@ -8,6 +8,10 @@ ansible [all_servers] -a hostname - Printa todos os hostnames dos servidores
 ansible [all_servers] -a uptime - Confere a quanto tempo os servers estão em pé
 ansible [server] -a free - Verifica o espaço em disco do servidor
 ansible [all_servers] -f 1 -a "free" - Roda um comando um servidor por vez
+ansible netcool -b -m shell -a "df -h /var" -i inventory.yml - executa o comando df -h no host remoto
+ansible netcool -b -m shell -a "find /var -mount -size +100M -exec du -sh {} \;" -i inventory.yml - executa o comando find no host remoto
+ansible netcool -b -m shell -a "rm -rf /var/cache/yum/" -i inventory.yml - remove o cche do yum no host remoto
+ansible netcool -b -m shell -a "ls -l /var/log/audit | tail -n 15" -i inventory.yml - executa o comando de listar arquivos no host remoto
 ```
 
 ### `Ad-hoc [File Transfer]`
@@ -40,6 +44,14 @@ ansible [server] -m apt -a "name=giropops state=present" - Instala o pacote dese
 ansible [server] -m apt -a "name=giropops-1.2 state=present" - Instala o pacote com a versão desejada
 ansible [server] -m apt -a "name=giropops state=latest" - Instala a última versão do pacote desejado
 ansible [server] -m apt -a "name=giropops state=absent" - Desinstala o pacote desejado no servidor
+```
+
+### `Ad-hoc [Rebooting servers]`
+
+```
+ansible atlanta -a "/sbin/reboot" - To reboot all the servers in the [atlanta] group
+ansible atlanta -a "/sbin/reboot" -f 10 - To reboot the [atlanta] servers with 10 parallel forks:
+ansible atlanta -a "/sbin/reboot" -f 10 -u username - To connect as a different user
 ```
 
 ### `Ad-hoc [Create user and groups]`
