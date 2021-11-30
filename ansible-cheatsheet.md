@@ -1,6 +1,6 @@
+## Ansible cheatsheet for DevOps community
 
-
-
+### `Basic commands`
 
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
