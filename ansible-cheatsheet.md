@@ -8,10 +8,10 @@ ansible [all_servers] -a hostname - Printa todos os hostnames dos servidores
 ansible [all_servers] -a uptime - Confere a quanto tempo os servers estão em pé
 ansible [server] -a free - Verifica o espaço em disco do servidor
 ansible [all_servers] -f 1 -a "free" - Roda um comando um servidor por vez
-ansible netcool -b -m shell -a "df -h /var" -i inventory.yml - executa o comando df -h no host remoto
-ansible netcool -b -m shell -a "find /var -mount -size +100M -exec du -sh {} \;" -i inventory.yml - executa o comando find no host remoto
-ansible netcool -b -m shell -a "rm -rf /var/cache/yum/" -i inventory.yml - remove o cche do yum no host remoto
-ansible netcool -b -m shell -a "ls -l /var/log/audit | tail -n 15" -i inventory.yml - executa o comando de listar arquivos no host remoto
+ansible prod -b -m shell -a "df -h /var" -i inventory.yml - executa o comando df -h no host remoto
+ansible prod -b -m shell -a "find /var -mount -size +100M -exec du -sh {} \;" -i inventory.yml - executa o comando find no host remoto
+ansible prod -b -m shell -a "rm -rf /var/cache/yum/" -i inventory.yml - remove o cche do yum no host remoto
+ansible prod -b -m shell -a "ls -l /var/log/audit | tail -n 15" -i inventory.yml - executa o comando de listar arquivos no host remoto
 ```
 
 ### `Ad-hoc [File Transfer]`
