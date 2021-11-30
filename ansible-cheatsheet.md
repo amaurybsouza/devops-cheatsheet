@@ -41,3 +41,18 @@ ansible [server] -m apt -a "name=giropops-1.2 state=present" - Instala o pacote 
 ansible [server] -m apt -a "name=giropops state=latest" - Instala a última versão do pacote desejado
 ansible [server] -m apt -a "name=giropops state=absent" - Desinstala o pacote desejado no servidor
 ```
+
+### Ad-hoc [Create user and groups]
+
+```
+ansible [server] -s -m group -a "name=admin state=present"
+Cria um grupo no servidor remoto
+ansible [server] -s -m user -a "name=giropops group=admin createhome=yes"
+Cria um usuário do grupo no servidor remoto
+ansible [server] -m user -a "name=giropops password=strigus"
+Cria um usuário com senha no servidor remoto
+ansible [server] -a "id giropops"
+Confirma a criação no servidor
+ansible [server] -s -m user -a "name=giropops state=absent"
+Deleta um usuário no servidor remoto
+```
