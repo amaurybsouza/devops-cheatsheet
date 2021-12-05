@@ -29,9 +29,15 @@ mv [arquivo] [diretório_destino] (Move um arquivo)
 mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
+### `Miscelanious commands`
+```bash
+$ echo Hello There | tr [:lower:] [:upper:]
+HELLO THERE
+```
+
 ### `Linux installation`
 
-```
+``` bash
 / (root) filesystem
 /var filesystem (sempre separado numa partição especifica, fila de impressão, de e-mail, logs pode ocupar muito espaço e é bom separar esse diretório)
 /home filesystem (diretório que ficam os arquivos dos usuários, tem que isolar essa partição, para que ele fique separado, não impactando outras partições e aplicações)
