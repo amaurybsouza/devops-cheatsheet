@@ -2,7 +2,7 @@
 
 ### `Basic commands`
 
-```
+```bash
 pwd (Mostra em qual diretorio você está)
 cd [caminho_ou_nome_diretorio] (Vai para o diretório desejado)
 cd .. (Vai para o diretório anterior)
