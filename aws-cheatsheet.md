@@ -13,3 +13,10 @@ aws ec2 stop-instances --instance-ids i-0c42e1bba4a6db957 - comando para parar u
 aws-cli - ferramenta escrita em Pythonpara implementar/criar/modificar recursos na AWS via linha de comando.
 ec2 - servico de maquinas virtuais da amazon web services
 ```
+
+### `Modelo de responsabilidade compartilhada`
+
+```
+AWS e responsavel pela seguranca DA nuvem
+Client e responsavel pela seguranca NA nuvem
+```
