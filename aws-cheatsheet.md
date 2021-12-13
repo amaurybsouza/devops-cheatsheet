@@ -1,4 +1,4 @@
-## AWS Ad-hoc commands
+## AWS commands
 
 ### `AWS CLI`
 
