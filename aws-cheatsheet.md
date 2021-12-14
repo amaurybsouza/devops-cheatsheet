@@ -25,7 +25,8 @@ Client e responsavel pela seguranca NA nuvem
 ### `AWS Global Infrastructure`
 
 ```
-AWS Regions - regiao geografica onde existe um datacenter da amazon web services
+AWS Regions - regiao geografica onde existe um datacenter da amazon
 AWS  Availability Zones - sao datacenter dentro de uma regiao (normalmente 3 datacenters por regiao)
 AWS Edge Locations - 
+Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ dentro de uma regiao na amazon.
 ```
