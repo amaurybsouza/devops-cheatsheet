@@ -16,7 +16,7 @@ ec2 - servico de maquinas virtuais da amazon web services
 IAM - servico global de identidade e controle de acessos na amazon
 ```
 
-### `Modelo de responsabilidade compartilhada`
+### `Shared responsability model`
 
 ```
 AWS e responsavel pela seguranca DA nuvem
