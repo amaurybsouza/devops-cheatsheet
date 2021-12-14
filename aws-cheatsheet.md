@@ -26,7 +26,10 @@ Client e responsavel pela seguranca NA nuvem
 
 ```
 AWS Regions - regiao geografica onde existe um datacenter da amazon
-AWS  Availability Zones - sao datacenter dentro de uma regiao (normalmente 3 datacenters por regiao)
+AWS  Availability Zones - sao datacenters dentro de uma regiao (normalmente 3 datacenters por regiao)
+  - mais disponibilidade do servico/produto
+  - redundancia de energia
+  - conectividade
 AWS Edge Locations - 
 Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ dentro de uma regiao na amazon.
 ```
