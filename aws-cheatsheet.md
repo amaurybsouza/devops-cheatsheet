@@ -16,6 +16,13 @@ ec2 - servico de maquinas virtuais da amazon web services
 IAM - servico global de identidade e controle de acessos na amazon
 ```
 
+### `AWS Services`
+
+```
+apt-gateway - e um gateway na AWS que recebe requisicoes HTTPS, e escala por default 10k de requests por segundo
+
+```
+
 ### `Shared responsability model`
 
 ```
