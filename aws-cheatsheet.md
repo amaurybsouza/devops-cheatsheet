@@ -46,6 +46,7 @@ Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ de
 ```
 modalidade de contrato 
 (on-demand) - nesta categoria de contrato voce paga apenas pelas instancias que EC2 que voce utilizar (por hora/segundos)
-(ssss) - 
+(reservadas) - oferece um desconto legal de 72% comparada ao modelo on-demanda
+(spot) - oferece mais desconto ainda chegando ate 90% em comparacao com o modelo sob-demanda.
 
 ```
