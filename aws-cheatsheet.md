@@ -40,3 +40,12 @@ AWS  Availability Zones - sao datacenters dentro de uma regiao (normalmente 3 da
 AWS Edge Locations - conteudo e entregue para usuarios finais com baixa latencia
 Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ dentro de uma regiao na amazon.
 ```
+
+### `AWS EC2`
+
+```
+modalidade de contrato 
+(on-demand) - nesta categoria de contrato voce paga apenas pelas instancias que EC2 que voce utilizar (por hora/segundos)
+(ssss) - 
+
+```
