@@ -51,7 +51,10 @@ Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ de
 (spot) - oferece mais desconto ainda chegando ate 90% em comparacao com o modelo sob-demanda.
 ---
 EBS - volume de discos usados nas instancias EC2
-1) dispositivos EBS nao sao globais, apenas por regioes.
+1 - dispositivos EBS nao sao globais, apenas por regioes.
+1.1 - a instancia deve estar na mesma zona de disponiblidade do volume EBS.
+1.2 - podemos anexar varios volumes de EBS na instancia do EC2.
+
 
 
 
