@@ -23,6 +23,7 @@ apt-gateway - e um gateway na AWS que recebe requisicoes HTTPS, e escala por def
 dynamodb - banco de dados NoSQL da AWS (escalabilidade alta e extremamente rapida)
 SQS - sistemas de filas da AWS (escala muito, pode ter milhoes de requests por segundos)
 lambda - executar as regras de negocio sao efetuadas nas funcoes lambdas
+EBS - volume de blocos para instancias EC2 na AWS
 ```
 
 ### `Shared responsability model`
