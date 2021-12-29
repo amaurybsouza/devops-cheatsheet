@@ -49,7 +49,9 @@ Multi AZ - quando determinado servico/produto esta presente em mais de uma AZ de
 (on-demand) - nesta categoria de contrato voce paga apenas pelas instancias que EC2 que voce utilizar (por hora/segundos)
 (reservadas) - oferece um desconto legal de 72% comparada ao modelo on-demanda
 (spot) - oferece mais desconto ainda chegando ate 90% em comparacao com o modelo sob-demanda.
-
+---
+EBS - volume de discos usados nas instancias EC2
+1) dispositivos EBS nao sao globais, apenas por regioes.
 
 
 
