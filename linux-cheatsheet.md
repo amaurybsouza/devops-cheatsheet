@@ -29,7 +29,7 @@ mv [arquivo] [diretório_destino] (Move um arquivo)
 mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
-### `Package management (Red Hat)`
+### `Package management (RHEL based)`
 ```
 rpm  (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
 MODOS (O rpm trabalha em modos, COM 3 MODOS PRINCIPAIS (modeo de consulta, instalacao e remocao)
@@ -67,6 +67,10 @@ yum remove ksh (remove o pacote ksh)
 yumdownloader (é uma ferramenta do yum, normalmente não vem instalado como padrão no sistema)
 yumdownloader csh (faz o download do pacote csh)
 ```
+
+### `Package management (Debian based)`
+
+
 
 
 ### `Miscelanious commands`
