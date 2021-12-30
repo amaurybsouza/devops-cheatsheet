@@ -51,6 +51,21 @@ rpm -ivh --nodeps gcc-8.1.1-1.fc29.aarch64.rpm (força a instalação do pacote 
 rpm -ivh --test skypeforlinux-64.rpm (essa opção testa e não faz a instalação de fato)
 rpm -e ksh (remove o pacote ksh)
 rpm -evh ksh (remove o pacote ksh, usando o verbose e o hash, mostrando melhor o resultado da remoção)
+rpm -evh --teste gcc (simula a remoção do pacote gcc, mas não remove de fato)
+rpm2cpio (ele transforma um arquivo rpm em cpio, de agrupamento de arquivos)
+rpm2cpio gcc-8.1.1-1.fc29.aarch64.rpm > gcc.cpio (é uma forma de extrair o que tem dentro do pacote rpm)
+/etc/yum.conf (principal arquivo de configuração do yum)
+/etc/yum.repos.d/ (diretório que contém as fontes de pacotes, repositório, que o yum vai consultar)
+yum (comando equivalente ao apt-get do Debian, ele faz download, instalação, verificação de dependências dos pacotes)
+yum install gcc (instala o pacote gcc e suas dependências)
+yum update (atualiza todos os pacotes do sistema, fontes novas)
+yum upgrade (atualiza os pacotes e ainda, remove pacotes obsoletos do sistema)
+yum check-update (checa todos os pacotes e verifica qual precisa de update, em relação a base de origem)
+yum list (lista todos os pacotes que estão instalados no sistema)
+yum search samba (mostra todos os pacotes que são relacionados ao samba)
+yum remove ksh (remove o pacote ksh)
+yumdownloader (é uma ferramenta do yum, normalmente não vem instalado como padrão no sistema)
+yumdownloader csh (faz o download do pacote csh)
 ```
 
 
