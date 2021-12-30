@@ -42,6 +42,15 @@ rpm -qd (mostra arquivos de documentação do pacote)
 rpm -qf /etc/skel/.bashrc (mostra qual aplicação instalou esse pacote, esse arquivo)
 rpm -qlp adobe-release-x86_64-1.0-1.noarch.rpm (lista os arquivos que estão dentro do pacote adobe)
 rpm -i adobe-release-x86_64-1.0-1.noarch.rpm (instala essa aplicação, esse pacote)
+rpm -U adobe-release-x86_64-1.0-1.noarch.rpm (faz o update, atualiza a versão do pacote)
+principais opções usadas com o -i (v e h) (verbose e hash - cerquilhas)
+rpm -ivh skypeforlinux-64.rpm (instala o pacote, mostra os detalhes da instalação e mostra os hash (cerquilhas durante a instalação))
+rpm -qa skypeforlinux (lista o pacote)
+rpm -ivh gcc-8.1.1-1.fc29.aarch64.rpm (esse pacote precisa de dependência para ser instalado)
+rpm -ivh --nodeps gcc-8.1.1-1.fc29.aarch64.rpm (força a instalação do pacote sem verificar as dependências)
+rpm -ivh --test skypeforlinux-64.rpm (essa opção testa e não faz a instalação de fato)
+rpm -e ksh (remove o pacote ksh)
+rpm -evh ksh (remove o pacote ksh, usando o verbose e o hash, mostrando melhor o resultado da remoção)
 ```
 
 
