@@ -30,8 +30,11 @@ mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
 ### `Package management (Red Hat)`
-rpm (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
-
+```
+rpm  (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
+MODOS (O rpm trabalha em modos, COM 3 MODOS PRINCIPAIS (modeo de consulta, instalacao e remocao)
+rpm -qa (mostra todos os pacotes instalados no sistema)
+```
 
 
 ### `Miscelanious commands`
