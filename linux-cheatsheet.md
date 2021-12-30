@@ -29,6 +29,11 @@ mv [arquivo] [diretório_destino] (Move um arquivo)
 mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
+### `Package management (Red Hat)`
+rpm (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
+
+
+
 ### `Miscelanious commands`
 
 ```
