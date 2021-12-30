@@ -69,7 +69,24 @@ yumdownloader csh (faz o download do pacote csh)
 ```
 
 ### `Package management (Debian based)`
+```
+/etc/apt/sources.list (é nesse arquivo que contem todas as fontes, é daqui que o apt-get faz o download da versão correta dos programas)
+dpkg (instala e manipula arquivos .deb. Ele também faz operações de consultas em pacotes já instalados)
+Opções:
+-i : instala um pacote.
+-x : extrai conteúdo de um pacote.
+-r : remove um pacote, mas mantem os arquivos de configuração do pacote.
+-P : --purge - remove completamente o pacote e arquivos de configuração.
+-l : lista pacotes instalados.
+-c : exibe o conteúdo de um arquivo de pacote .deb. ou --contents (não instalado)
+-L : lista os arquivos que pertencem a tal pacote.
+-S : exibe quais arquivos foram copiados para o sistema após a instalação do pacote.
+-s : exibe o status do pacote.(instalado no sistema)
+-p : exibe informações detalhadas sobre pacote já instalado.
+--get-selections : lista todos os pacotes instalados.
+-I : mostra informações sobre um pacote não instalado.
 
+```
 
 
 
