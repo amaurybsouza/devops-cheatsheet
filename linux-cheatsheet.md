@@ -85,7 +85,26 @@ Opções:
 -p : exibe informações detalhadas sobre pacote já instalado.
 --get-selections : lista todos os pacotes instalados.
 -I : mostra informações sobre um pacote não instalado.
-
+dpkg -i ldap-utils_2.4.21-0ubuntu5.2_i386.deb (Instala o pacote 'ldap-utils' através de um arquivo de pacote .deb.)
+dpkg -r samba (Remove o pacote samba sem remover seus arquivos)
+dpkg -c ldap-utils_2.4.21-0ubuntu5.2_i386.deb (Mostra o conteúdo do arquivo de pacote)
+dpkg -p samba (Mostra detalhes sobre o pacote samba, que já está instalado)
+dpkg-reconfigure (é usado para imprimir pacotes que exigem uma interação de configuração com o usuário)
+dselect (é uma interface gráfica do apt, em modo texto, seleciona os pacotes para remover, instalar)
+apt-get (os comandos do apt tem um repositório, um conjunto de URL, onde ele consulta os pacotes e softwares que se pretende instalar ou remover)
+apt-get update (obtém informações atualizadas das fontes)
+apt-get upgrade (realiza a atualização de todos os pacotes)
+apt-get dist-upgrade (realiza a atualização de todos os pacotes, desde que não haja quebra de dependências)
+apt-get install (Instala um pacote e suas dependências a partir de repositórios que estão listados dentro de /etc/apt/sources.list)
+apt-get install zsh (instala esse pacote, verifica a versão mais atual, a origem, de onde ele vai fazer download e quais os pacotes dependentes).
+Opções:
+-s : simula a instalação do pacote.
+-d: apenas faz o download dos pacotes para o diretório /var/cache/apt/archives/.
+-y : assume como “Yes” todas as respostas de instalação.
+--reinstall : reinstala um pacote
+apt-get purge (remove o pacote e os arquivos de configuração)
+apt-get check (verifica as consistencias checa a base de dados do gerenciador de pacotes)
+apt-get clean (remove algum arquivo temporário e faz uma limpeza na base de dados)
 ```
 
 
