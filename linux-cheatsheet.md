@@ -34,6 +34,14 @@ mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 rpm  (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
 MODOS (O rpm trabalha em modos, COM 3 MODOS PRINCIPAIS (modeo de consulta, instalacao e remocao)
 rpm -qa (mostra todos os pacotes instalados no sistema)
+rpm -qa bash (mostra informações do que tiver o nome "bash")
+rpm -qi bash (a opção i mostra informações, detalhes  do aplicativo mencionado, no caso o "bash")
+rpm -ql bash (lista os arquivos que pertecem a essa instalação)
+rpm -qc bash (mostra apenas os arquivos de configuração do pacote)
+rpm -qd (mostra arquivos de documentação do pacote)
+rpm -qf /etc/skel/.bashrc (mostra qual aplicação instalou esse pacote, esse arquivo)
+rpm -qlp adobe-release-x86_64-1.0-1.noarch.rpm (lista os arquivos que estão dentro do pacote adobe)
+rpm -i adobe-release-x86_64-1.0-1.noarch.rpm (instala essa aplicação, esse pacote)
 ```
 
 
