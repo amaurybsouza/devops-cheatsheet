@@ -105,9 +105,17 @@ Opções:
 apt-get purge (remove o pacote e os arquivos de configuração)
 apt-get check (verifica as consistencias checa a base de dados do gerenciador de pacotes)
 apt-get clean (remove algum arquivo temporário e faz uma limpeza na base de dados)
+apt-get --download-only install zsh (faz o download do pacote, não instala)
+apt-cache (comando utilizado para mostrar as informações que ele tem na base de dados dele, na base de pacotes debian dele)
+apt-cache pkgnames (lista de pacotes instalados no sistema)
+apt-cache show vim (mostra as informações do vim, dependencias, descriçao dele, e outras informações)
+aptitude (ele tbm tem uma interface gráfica através de menus, mais complexa que o dselect)
+alien (ele converte e instala pacotes binários alien)
+aptitude purge csh (remove o pacote csh e todos os arquivos de configuração)
+aptitude search csh (pesquisa todos os pacotes que tem csh no nome dos pacotes, é bom que vc verifica qual o pacote ideal para se instalar)
+alien -r zsh_5.1.1-3_amd64.deb  (transforma esse pacote .deb em um pacote rpm para Red Hat)
+alien -i zsh-5.1.1-4.x86_64.rpm (instala o pacote, o sistema debian instala o pacote rpm, executa o dpkg)
 ```
-
-
 
 ### `Miscelanious commands`
 
