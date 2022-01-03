@@ -10,11 +10,15 @@ aws ec2 describe-availability-zones --region sa-east-1 - descreve as zonas de di
 
 ### `AWS Core services`
 
-```
+
 aws-cli - ferramenta escrita em Pythonpara implementar/criar/modificar recursos na AWS via linha de comando.
-ec2 - servico de maquinas virtuais da amazon web services
+
+`ec2` - servico de maquinas virtuais da AWS.
+  - `AMI` - sasasas
+  - `Security Groups` - sasasas
+
 IAM - servico global de identidade e controle de acessos na amazon
-```
+
 
 ### `AWS Services`
 
