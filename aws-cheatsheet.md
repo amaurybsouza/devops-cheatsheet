@@ -14,7 +14,7 @@ aws ec2 describe-availability-zones --region sa-east-1 - descreve as zonas de di
   - `AMI` - é a imagem da máquina virtual, clone do sistema (facilita o provisionamento em determinados cenarios)
   - `Security Groups` - e um servico de firewall que atua nas instancias EC2
   - `Elastic IP's` - e um endereco de IPv4 para instancias EC2 (associa esse endereco na instancia EC2 de forma fixa)
-  - `Load Balancing` - 
+  - `Load Balancing` - distribui a carga de trafego de aplicativos para diversos destinos, como EC2, containers
   - `Auto Scaling` - 
 
 IAM - servico global de identidade e controle de acessos na amazon
