@@ -17,11 +17,11 @@
   - `MFA` - multi factor authetication para melhorar a seguranca de acessos na AWS
   
  `VPC` - servico que prove toda a parte de rede da AWS entre os seus recursos
-  - `Subnet` - gama de enderecos IP's
-  - `Route Table` - conjunto de regras que sao usadas para determinas para onde o trafego rede sera direcionado
+  - `Subnet` - gama de enderecos IP's, particionar a rede dentro da VPC
+  - `Route table` - conjunto de regras para que tenha acesso para internet e entre subnets usamos route tables
   - `Gateway de internet` - um gateway que permite acesso a outros recursos na VPC e internet
   - `VPC endpoint` - permite conectar de forma privada a VPC aos servicos compativeis da AWS e aos servicos do VPC endpoint
-  - 
+  - `NAT gateway` - permite que suas instancias de VPC sejam acessadas na internet enquanto estao com subnets privadas.
 
 
 
