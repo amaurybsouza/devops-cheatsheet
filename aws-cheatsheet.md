@@ -21,7 +21,8 @@
   - `Route table` - conjunto de regras para que tenha acesso para internet e entre subnets usamos route tables
   - `Gateway de internet` - um gateway que permite acesso a outros recursos na VPC e internet
   - `VPC endpoint` - permite conectar de forma privada a VPC aos servicos compativeis da AWS e aos servicos do VPC endpoint
-  - `NAT gateway` - permite que suas instancias de VPC sejam acessadas na internet enquanto estao com subnets privadas.
+  - `NAT gateway` - permite que suas instancias de VPC sejam acessadas na internet enquanto estao com subnets privadas. (subnets privadas)
+  - `Internet gateway` - permite fazer NAT e permite internet para nossas VPC atraves do route table (subnets publicas)
 
 
 
