@@ -1,22 +1,20 @@
-## AWS commands
-
 ### AWS Core services
 
-`EC2` - servico de maquinas virtuais da AWS
+#### `EC2` - servico de maquinas virtuais da AWS
   - `AMI` - é a imagem da máquina virtual, clone do sistema (facilita o provisionamento em determinados cenarios)
   - `Security Groups` - e um servico de firewall que atua nas instancias EC2
   - `Elastic IP's` - e um endereco de IPv4 para instancias EC2 (associa esse endereco na instancia EC2 de forma fixa)
   - `Load Balancing` - distribui a carga de trafego de aplicativos para diversos destinos, como EC2, containers
   - `Auto Scaling` - monitora continuamente os aplicativos para garantir que operem nos níveis de desempenho desejados
 
-`IAM` - servico global de identidade e controle de acessos na AWS
+#### `IAM` - servico global de identidade e controle de acessos na AWS
   - `Users` - usuarios que podem ser criados na AWS para administracao dos servicos
   - `Grupos` - grupos de usuarios dentro da AWS
   - `Roles` - e uma identidade que voce pode criar com permissoes epecificas
   - `Policies` - e um objeto na AWS que define permissoes
   - `MFA` - multi factor authetication para melhorar a seguranca de acessos na AWS
   
- `VPC` - servico que prove toda a parte de rede da AWS entre os seus recursos
+ #### `VPC` - servico que prove toda a parte de rede da AWS entre os seus recursos
   - `Subnet` - gama de enderecos IP's, particionar a rede dentro da VPC
   - `Route table` - conjunto de regras para que tenha acesso para internet e entre subnets usamos route tables
   - `Gateway de internet` - um gateway que permite acesso a outros recursos na VPC e internet
