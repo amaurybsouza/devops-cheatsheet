@@ -1,13 +1,5 @@
 ## AWS commands
 
-### `AWS CLI`
-
-```
-aws ec2 start-instances --instance-ids i-0c42e1bba4a6db957 - comando para iniciar uma instancia EC2 na AWS
-aws ec2 stop-instances --instance-ids i-0c42e1bba4a6db957 - comando para parar uma instancia EC2 na AWS
-aws ec2 describe-availability-zones --region sa-east-1 - descreve as zonas de dispoibilidade da regiao de Sao Paulo
-```
-
 ### AWS Core services
 
 `EC2` - servico de maquinas virtuais da AWS
@@ -15,10 +7,15 @@ aws ec2 describe-availability-zones --region sa-east-1 - descreve as zonas de di
   - `Security Groups` - e um servico de firewall que atua nas instancias EC2
   - `Elastic IP's` - e um endereco de IPv4 para instancias EC2 (associa esse endereco na instancia EC2 de forma fixa)
   - `Load Balancing` - distribui a carga de trafego de aplicativos para diversos destinos, como EC2, containers
-  - `Auto Scaling` - 
+  - `Auto Scaling` - monitora continuamente os aplicativos para garantir que operem nos níveis de desempenho desejados
 
-IAM - servico global de identidade e controle de acessos na amazon
-aws-cli - ferramenta escrita em Pythonpara implementar/criar/modificar recursos na AWS via linha de comando.
+`IAM` - servico global de identidade e controle de acessos na AWS
+  - 
+
+
+
+
+
 
 
 ### `AWS Services`
