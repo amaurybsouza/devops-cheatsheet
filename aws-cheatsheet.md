@@ -15,6 +15,12 @@
   - `Roles` - e uma identidade que voce pode criar com permissoes epecificas
   - `Policies` - e um objeto na AWS que define permissoes
   - `MFA` - multi factor authetication para melhorar a seguranca de acessos na AWS
+  
+ `VPC` - servico que prove toda a parte de rede da AWS entre os seus recursos
+  - `Subnet` - gama de enderecos IP's
+  - `Route Table` - conjunto de regras que sao usadas para determinas para onde o trafego rede sera direcionado
+  - `Gateway de internet` - um gateway que permite acesso a outros recursos na VPC e internet
+  - `VPC endpoint` - permite conectar de forma privada a VPC aos servicos compativeis da AWS e aos servicos do VPC endpoint
   - 
 
 
