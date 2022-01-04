@@ -10,6 +10,11 @@
   - `Auto Scaling` - monitora continuamente os aplicativos para garantir que operem nos níveis de desempenho desejados
 
 `IAM` - servico global de identidade e controle de acessos na AWS
+  - `Users` - usuarios que podem ser criados na AWS para administracao dos servicos
+  - `Grupos` - grupos de usuarios dentro da AWS
+  - `Roles` - e uma identidade que voce pode criar com permissoes epecificas
+  - `Policies` - e um objeto na AWS que define permissoes
+  - `MFA` - multi factor authetication para melhorar a seguranca de acessos na AWS
   - 
 
 
