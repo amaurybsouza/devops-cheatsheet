@@ -1,6 +1,6 @@
 
-## AWS Core services
+## Kubernetes
 
-### `EC2` - servico de maquinas virtuais da AWS
-### `AMI` - é a imagem da máquina virtual, clone do sistema (facilita o provisionamento em determinados cenarios)
-Security Groups -
+- `container runtime` - containerd
+- `etcd` - "banco de dados" do meu cluster, onde armazena todas as informacoes do meu cluster
+- `kubeAPI` - API do Kubernetes
