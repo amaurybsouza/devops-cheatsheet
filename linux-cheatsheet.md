@@ -1,5 +1,11 @@
 ## Linux cheatsheet for DevOps community
 
+### `Linux servers`
+
+```
+$ hostnamectl set-hostname your-new-hostname (para alterar o nome da maquineta no CentOS)
+```
+
 ### `Basic commands`
 
 ```
