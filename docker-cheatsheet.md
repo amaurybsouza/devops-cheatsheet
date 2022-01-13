@@ -10,6 +10,19 @@ docker container run hellow-world (executa um container)
 docker container run -ti hello-world (executa um container)
 ```
 
+### `Troubleshooting`
+
+```
+- docker start failed after adding daemon.json file
+{
+    "exec-opts": ["native.cgroupdriver=systemd"],
+    "log-driver": "json-file",
+    "log-opts": {
+      "max-size": "100m"
+    }
+  }
+```
+
 ### `Basic commands`
 
 ```
