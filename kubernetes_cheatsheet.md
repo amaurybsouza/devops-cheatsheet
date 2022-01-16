@@ -1,14 +1,14 @@
 
 ### `Kubernetes concepts`
 
-`container runtime`  containerd
-`etcd`  "banco de dados" do meu cluster, onde armazena todas as informacoes do meu cluster
-`kubeapi`  API do Kubernetes
-`kubelet`  agente do kubernetes que roda nos meus nos (conversa com o master)
-`kubeprox`  ele que sabe onde esta rodando cada POD, cada servico
-`POD`  menor unidade do kubernetes, nao e um container. Dentro do POD pode ter 1 ou mais containers (compartilha o mesmo namespace)
-`Controllers`  ele que fala com a API server
-`Deployment`  como se fosse o service do Swarm, fazer o deployment para depois criar o service.
+1. `container` runtime  containerd
+2. `etcd`  "banco de dados" do meu cluster, onde armazena todas as informacoes do meu cluster
+3. `kubeapi`  API do Kubernetes
+4. `kubelet`  agente do kubernetes que roda nos meus nos (conversa com o master)
+5. `kubeprox`  ele que sabe onde esta rodando cada POD, cada servico
+6. `POD`  menor unidade do kubernetes. Dentro do POD pode ter 1 ou mais containers (compartilha o mesmo namespace)
+7. `Controllers`  ele que fala com a API server
+8. `Deployment`  como se fosse o service do Swarm, fazer o deployment para depois criar o service.
 
 
 ### `Basic commands`
