@@ -20,6 +20,7 @@ $ kubeadm token create --print-join-command - fornece o token para pormover um n
 $ kubeadm init - inicializa o cluster Kubernetes
 $ kubeadm config images pull - faz o pull das imagens que compoem o Kubernetes
 $ kubectl get pods --all-namespaces - obter todos os namespaces presente do Kubernetes
-$  kubectl get pods --all-namespaces -o wide - opcao estendida do comando para mostrar mais resultados
+$ kubectl get pods --all-namespaces -o wide - opcao estendida do comando para mostrar mais resultados
+$ kubectl describe nodes localhost.localdomain - mostra mais detalhes do meu node
 ```
 
