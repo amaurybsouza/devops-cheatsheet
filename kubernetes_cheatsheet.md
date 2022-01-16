@@ -2,6 +2,7 @@
 
 ```
 $ kubectl get nodes - mostra os nodes do cluster Kubernetes
+$ kubeadm token create --print-join-command - fornece o token para pormover um no como worker
 ```
 
 
