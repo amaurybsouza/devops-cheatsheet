@@ -2,6 +2,7 @@
 ### `Kubernetes concepts`
 ```
 container runtime - containerd
+namespace - como se fosse um cercadinho da minha app (maior controle)
 etcd - "banco de dados" do meu cluster, onde armazena todas as informacoes do meu cluster
 kubeapi - API do Kubernetes
 kubelet - agente do kubernetes que roda nos meus nos (conversa com o master)
