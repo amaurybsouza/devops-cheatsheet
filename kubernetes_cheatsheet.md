@@ -1,3 +1,12 @@
+### `Basic commands`
+
+```
+$ kubectl get nodes - mostra os nodes do cluster Kubernetes
+```
+
+
+
+
 
 ## Kubernetes cheat sheet
 
