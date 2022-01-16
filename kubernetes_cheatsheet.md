@@ -71,5 +71,7 @@ $ kubeadm config images pull - faz o pull das imagens que compoem o Kubernetes
 $ kubectl get pods --all-namespaces - obter todos os namespaces presente do Kubernetes
 $ kubectl get pods --all-namespaces -o wide - opcao estendida do comando para mostrar mais resultados
 $ kubectl describe nodes localhost.localdomain - mostra mais detalhes do meu node
+$ kubectl run nginx --image=nginx - executa um pod de nome nginx usando a imagem do nginx.
+$ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ```
 
