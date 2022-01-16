@@ -5,6 +5,7 @@ $ kubectl get nodes - mostra os nodes do cluster Kubernetes
 $ kubeadm token create --print-join-command - fornece o token para pormover um no como worker
 $ kubeadm init - inicializa o cluster Kubernetes
 $ kubeadm config images pull - faz o pull das imagens que compoem o Kubernetes
+$ kubectl get pods --all-namespaces - obter todos os namespaces presente do Kubernetes
 ```
 
 
