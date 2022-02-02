@@ -48,8 +48,12 @@ docker container run -d -m 64M --cpus 0.5 nginx (executa um cintainer com limite
 docker container cp festive_lumiere:/app/app.js /tmp (copia um file do container rodando para o /tmp da minha maquina)
 ```
 
-### `Services`
+### `Volumes`
+```
+$ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/var/www/html --rm phpmessages
+```
 
+### `Services`
 ```
 docker service create (cria um service)
 docker service ls (lista um service)
@@ -61,7 +65,6 @@ docker service rm (remove um service)
 ```
 
 ### `Swarm`
-
 ```
 docker swarm init (inicia um cluster de swarm)
 docker swarm join (comando para adicionar novos nodes ao cluster)
