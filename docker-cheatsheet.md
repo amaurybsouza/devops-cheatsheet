@@ -45,6 +45,7 @@ docker container rm -f (remove um container em execucao)
 docker container top (mostra os processos em execucao)
 docker container stats (mostra informacoes de consumo de recursos como CPU/Memoria)
 docker container run -d -m 64M --cpus 0.5 nginx (executa um cintainer com limite de CPU/Memoria)
+docker container cp festive_lumiere:/app/app.js /tmp (copia um file do container rodando para o /tmp da minha maquina)
 ```
 
 ### `Services`
