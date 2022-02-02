@@ -50,7 +50,8 @@ docker container cp festive_lumiere:/app/app.js /tmp (copia um file do container
 
 ### `Volumes`
 ```
-$ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/var/www/html --rm phpmessages
+$ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/var/www/html --rm phpmessages (executando um container com volume)
+$ docker volume inspect teste (inspecionar um volume criado)
 ```
 
 ### `Services`
