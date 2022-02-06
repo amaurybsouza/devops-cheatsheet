@@ -127,7 +127,6 @@ alien -i zsh-5.1.1-4.x86_64.rpm (instala o pacote, o sistema debian instala o pa
 
 ```
 $ echo Hello There | tr [:lower:] [:upper:]
-HELLO THERE
 ```
 
 ### `Linux installation`
