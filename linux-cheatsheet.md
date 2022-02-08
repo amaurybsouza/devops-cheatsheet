@@ -2,13 +2,13 @@
 
 ### `Linux servers`
 
-```
+```bash
 $ hostnamectl set-hostname your-new-hostname (para alterar o nome da maquineta no CentOS)
 ```
 
 ### `Basic commands`
 
-```
+```bash
 pwd (Mostra em qual diretorio você está)
 cd [caminho_ou_nome_diretorio] (Vai para o diretório desejado)
 cd .. (Vai para o diretório anterior)
@@ -36,7 +36,8 @@ mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
 ### `Package management (RHEL based)`
-```
+
+```bash
 rpm  (é o equivalente ao dpkg do Debian, ele que faz a base de instalação e remoção dos pacotes)
 MODOS (O rpm trabalha em modos, COM 3 MODOS PRINCIPAIS (modeo de consulta, instalacao e remocao)
 rpm -qa (mostra todos os pacotes instalados no sistema)
@@ -75,7 +76,8 @@ yumdownloader csh (faz o download do pacote csh)
 ```
 
 ### `Package management (Debian based)`
-```
+
+```bash
 /etc/apt/sources.list (é nesse arquivo que contem todas as fontes, é daqui que o apt-get faz o download da versão correta dos programas)
 dpkg (instala e manipula arquivos .deb. Ele também faz operações de consultas em pacotes já instalados)
 Opções:
@@ -125,13 +127,13 @@ alien -i zsh-5.1.1-4.x86_64.rpm (instala o pacote, o sistema debian instala o pa
 
 ### `Miscelanious commands`
 
-```
+```bash
 $ echo Hello There | tr [:lower:] [:upper:]
 ```
 
 ### `Linux installation`
 
-``` 
+```bash
 / (root) filesystem
 /var filesystem (sempre separado numa partição especifica, fila de impressão, de e-mail, logs pode ocupar muito espaço e é bom separar esse diretório)
 /home filesystem (diretório que ficam os arquivos dos usuários, tem que isolar essa partição, para que ele fique separado, não impactando outras partições e aplicações)
@@ -141,7 +143,7 @@ swap space (é usado no windows, linux, espaço no hd que serve para uma ram tem
 
 ### `Partitions`
 
-```
+```bash
 - partições comuns:
   /home  (arquivos dos usuários, isolar numa partição, para que os dados dos usuários não cause impactos na aplicação)
   /var   (arquivos temporários, filas de impressão, de e-mail)
@@ -157,7 +159,7 @@ swap space (é usado no windows, linux, espaço no hd que serve para uma ram tem
 
 ### `Systems variables`
 
-```
+```bash
 HISTFILE=/root/.bash_history  (caminho que armazena os comandos feitos no terminal)
 HISTFILESIZE=2000  (tamanho maximo que o arquivo terá)
 HISTSIZE=1000   (limite maximo de linhas "comandos" no arquivo)
@@ -169,4 +171,10 @@ PWD=/home/borges/Downloads    (mostra o diretório atual)
 SHELL=/bin/bash (mostra o shell que está sendo usado)
 TERM=xterm-256color (mostra qual terminal estamos usando)
 USER=root (mostra o nome do usuário atual)
+```
+
+### `Networks commands`
+
+```bash
+/etc/services (mostra todas as listagens de portas públicas do Linux e os serviços que rodam essas portas)
 ```
