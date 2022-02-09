@@ -1,6 +1,6 @@
 ## Ansible Ad-hoc commands
 
-### `Basic commands`
+### `Ad-hoc [Basics]`
 
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
