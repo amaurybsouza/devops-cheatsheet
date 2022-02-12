@@ -35,7 +35,7 @@ mv [arquivo] [diretório_destino] (Move um arquivo)
 mv [arquivo_antigo] [arquivo_novo] (Renomeia um arquivo)
 ```
 
-[`Package management (RHEL based)`](https://gist.github.com/amaurybsouza/22be242c4cded4a6124b679071dc7f0e)
+### [`Package management (RHEL based)`](https://gist.github.com/amaurybsouza/22be242c4cded4a6124b679071dc7f0e)
 
 ### `Package management (RHEL based)`
 
