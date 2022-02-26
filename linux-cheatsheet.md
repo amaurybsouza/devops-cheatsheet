@@ -87,6 +87,21 @@ alien -r zsh_5.1.1-3_amd64.deb  (transforma esse pacote .deb em um pacote rpm pa
 alien -i zsh-5.1.1-4.x86_64.rpm (instala o pacote, o sistema debian instala o pacote rpm, executa o dpkg)
 ```
 
+### `Regular expressions`
+
+```
+grep -c Linux (procura por todas os arquivos dentro desse diretórioe mostra as ocorrências de Linux nos arquivos).
+Opções do comando grep
+-c: número de ocorrências da palavra/ expressão dentro do texto.
+-i: ignora o case-sensitive/maiusculas e minusculas. (essa opção deixe o comando mais pesado)
+-r: modo recursivo, procura dentro dos diretórios/subdiretórios.
+-E: expande o conjunto de expressões regulares/mesmo que egrep.
+-v: mostra os resultados invertidos, exclui a expressão regular do comando, mostra o inverso. 
+-o: lista as ocorrências que foram encontradas.
+--color: destaca com vermelho onde a ER casou.
+-n: exibe o número de linhas que contem o padrão.
+```
+
 ### `Miscelanious commands`
 
 ```
