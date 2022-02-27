@@ -78,7 +78,7 @@ $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ### `Kubernetes on VirtualBOX`
 Cluster nodes
 ```
-2  apt update
+    2  apt update
     3  yum update
     4  yum install net-tools -y
     5  ifconfig
