@@ -76,7 +76,75 @@ $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ```
 
 ### `Kubernetes on VirtualBOX`
-Cluster nodes
+#### `Master`
+```
+    2  apt update
+    3  yum update
+    4  yum install net-tools -y
+    5  ifconfig
+    6  pwd
+    7  yum install vim git -y
+    8  pwd
+    9  ifconfig
+   10  hostnamectl set-hostname mr_robbot
+   11  reboot
+   12  poweroff
+   13  hostnamectl set-hostname k8s_master
+   14  reboot
+   15  curl -fsSL https://get.docker.com | bash
+   16  apt install auto-complete -y
+   17  yum install auto-complete -y
+   18  yum install autocomplete -y
+   19  yum install bash-completion -y
+   20  systemctl start docker
+   21  systemctl enable docker
+   22  history
+   23  cat > /etc/docker/daemon.json <<EOF
+   24     13  {
+   25     14    "exec-opts": ["native.cgroupdriver=systemd"],
+   26     15    "log-driver": "json-file",
+   27     16    "log-opts": {
+   28     17      "max-size": "100m"
+   29     18    },
+   30     19    "storage-driver": "overlay2",
+   31     20    "storage-opts": [
+   32     21      "overlay2.override_kernel_check=true"
+   33     22    ]
+   46  vim /etc/docker/daemon.json
+   47  sudo mkdir -p /etc/systemd/system/docker.service.d
+   48  sudo systemctl daemon-reload
+   49  sudo systemctl restart docker
+   50  sudo systemctl status docker
+   51  docker info | grep -i cgroup
+   52  vim /etc/yum.repos.d/kubernetes.repo
+   53  sudo setenforce 0
+   54  sudo systemctl disable firewalld
+   55  sudo systemctl stop firewalld
+   56  sudo systemctl status firewalld
+   57  yum update -y
+   58  sudo yum install -y kubelet kubeadm kubectl
+   59  sudo systemctl enable docker && sudo systemctl start docker
+   60  sudo systemctl enable kubelet && sudo systemctl start kubelet
+   61  vim /etc/sysctl.d/k8s.conf
+   62  sudo swapoff -a
+   63  vim /etc/fstab
+   64  reboot
+   65  history
+   66  sudo kubeadm config images pull
+   67  hostnamectl set-hostname k8smaster
+   68  reboot
+   69  history
+   70  sudo kubeadm init
+   71  mkdir -p $HOME/.kube
+   72  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   73  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   74  sudo modprobe br_netfilter ip_vs_rr ip_vs_wrr ip_vs_sh nf_conntrack_ipv4 ip_vs
+   75  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+   76  kubectl get nodes
+   77  kubectl get pods -n kube-system
+   78  kubectl get nodes
+```
+#### `Cluster nodes`
 ```
     2  apt update
     3  yum update
