@@ -75,3 +75,51 @@ $ kubectl run nginx --image=nginx - executa um pod de nome nginx usando a imagem
 $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ```
 
+### `Kubernetes on VirtualBOX`
+Cluster nodes
+```
+2  apt update
+    3  yum update
+    4  yum install net-tools -y
+    5  ifconfig
+    6  pwd
+    7  yum install vim git -y
+    8  pwd
+    9  ifconfig
+   10  hostnamectl set-hostname mr_robbot
+   11  reboot
+   12  poweroff
+   13  hostnamectl set-hostname k8snode01
+   14  reboot
+   15  systemctl status dokcer
+   16  systemctl status docker
+   17  curl -fsSL https://get.docker.com | bash
+   18  yum install vim git -y
+   19   apt install auto-complete -y
+   20  yumt install auto-complete -y
+   21  yum install auto-complete -y
+   22  yum install bash-completion -y
+   23  systemctl start docker
+   24  systemctl enable docker
+   25  vim /etc/docker/daemon.json
+   26   sudo mkdir -p /etc/systemd/system/docker.service.d
+   27  sudo systemctl daemon-reload
+   28  sudo systemctl restart docker
+   29  docker info | grep -i cgroup
+   30  vim /etc/yum.repos.d/kubernetes.repo
+   31  sudo setenforce 0
+   32  sudo systemctl stop firewalld
+   33  sudo systemctl disable firewalld
+   34  sudo yum install -y kubelet kubeadm kubectl
+   35  sudo systemctl enable docker && sudo systemctl start docker
+   36   sudo systemctl enable kubelet && sudo systemctl start kubelet
+   37  vim /etc/sysctl.d/k8s.conf
+   38  sudo swapoff -a
+   39  vim /etc/fstab
+   40  free -h
+   41  reboot
+   42  pwd
+   43  history
+   44  kubeadm join 192.168.1.111:6443 --token ez98s9.mx2rida372v3cxeh         --discovery-token-ca-cert-hash sha256:5ea69efc6451dedb940ce665bdf436ac3e54e0e44774fb0654b60562677944f5
+```
+
