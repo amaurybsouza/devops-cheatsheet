@@ -6,7 +6,7 @@
 git config --global user.name "[username]" - Configura seu username do Git
 git config --global user.email "[email]" - Configura seu email do Git
 git config --global color.ui auto - Configura cores que apareceram no terminal
-git config --global alias.[alias_nome] [comando_git] - Configura um alias para comandos Git
+git config --global alias.c "commit -ma" - Configura um alias para comandos Git
 git config --system core.editor vim - Configura o editor de texto padrao
 git config --global --edit - Abre o arquivo  que contem usuario e email setados
 ```
