@@ -5,6 +5,7 @@
 ```bash
 $ hostnamectl set-hostname your-new-hostname (para alterar o nome da maquineta no CentOS)
 $ ssh-keygen (comando usado para gerar autenticacao SSH)
+$ ssh-copy-id amaury@192.168.2.102 (copia a chave pública para o servidor remoto)
 ```
 
 ### `Basic commands`
