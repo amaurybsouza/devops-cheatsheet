@@ -1,5 +1,5 @@
 
-### `Kubernetes Concepts
+### Kubernetes Concepts
 ```
 container runtime - containerd
 namespace - como se fosse um cercadinho da minha app (maior controle)
@@ -12,7 +12,7 @@ Controllers - ele que fala com a API server
 Deployment - como se fosse o service do Swarm, fazer o deployment para depois criar o service.
 ```
 
-### `Kubectl get commands`
+### Kubectl get commands
 
 ```
 kubectl get nodes - Lista todos os nodes no cluster
@@ -32,7 +32,7 @@ kubectl get pvc - Lista todos os PersistentVolumeClaim
 kubectl get cronjobs - Lista todos os cronjobs
 ```
 
-### `kubectl create commands`
+### kubectl create commands
 ```
 kubectl create -f [nome_arquivo.yaml] - Cria algo a partir de um arquivo yaml
 kubectl create deploy [nome_deploy] --image=[imagem_deploy] - Cria um
@@ -44,7 +44,7 @@ Cria um cronjob
 kubectl create service [tipo_svc] [nome_svc] --tcp=[porta] - Cria um service
 ```
 
-### `kubectl describe commands`
+### kubectl describe commands
 ```
 kubectl describe node [nome_node] - Lista os dados e status do node desejado
 kubectl describe service [nome_service] - Lista os detalhes do service desejado
@@ -53,7 +53,7 @@ kubectl describe endpoints [nome_endpoint] - Lista os dados do EndPoint desejado
 kubectl describe replicaset [nome_replicaset] - Lista os dados do ReplicaSet desejado
 ```
 
-### `kubeadm commands`
+### kubeadm commands
 ```
 kubeadm config images pull - Efetua o download das imagens dos componentes
 do kubernetes
@@ -63,7 +63,7 @@ novos nodes
 kubeadm join --tok
 ```
 
-### `Others commands`
+### Others commands
 ```
 $ kubectl get nodes - mostra os nodes do cluster Kubernetes
 $ kubeadm token create --print-join-command - fornece o token para pormover um no como worker
@@ -76,7 +76,7 @@ $ kubectl run nginx --image=nginx - executa um pod de nome nginx usando a imagem
 $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ```
 
-### `Kubernetes on VirtualBOX`
+### Kubernetes on VirtualBOX
 #### `Master`
 ```
     2  apt update
