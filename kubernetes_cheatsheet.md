@@ -13,7 +13,9 @@ Deployment - como se fosse o service do Swarm, fazer o deployment para depois cr
 ```
 
 ### `Kubectl get commands`
-```
+
+**kubectl get nodes** - lista todos os nodes do cluster
+```bash
 kubectl get nodes - Lista todos os nodes no cluster
 kubectl get namespaces - Lista todos os namespaces disponíveis no cluster
 kubectl get pod -n [nome_namespace] - Lista todos os pods no namespace desejado
