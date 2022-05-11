@@ -1,5 +1,5 @@
 
-### `Kubernetes concepts`
+### `Kubernetes Concepts
 ```
 container runtime - containerd
 namespace - como se fosse um cercadinho da minha app (maior controle)
