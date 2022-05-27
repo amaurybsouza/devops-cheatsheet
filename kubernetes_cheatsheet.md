@@ -1,26 +1,13 @@
 
-### Kubernetes Concepts
-
-```bash
-container runtime - containerd
-namespace - como se fosse um cercadinho da minha app (maior controle)
-etcd - "banco de dados" do meu cluster, onde armazena todas as informacoes do meu cluster
-kubeapi - API do Kubernetes
-kubelet - agente do kubernetes que roda nos meus nos (conversa com o master)
-kubeprox - ele que sabe onde esta rodando cada POD, cada servico
-POD - menor unidade do kubernetes. Dentro do POD pode ter 1 ou mais containers (compartilha o mesmo namespace)
-Controllers - ele que fala com a API server
-Deployment - como se fosse o service do Swarm, fazer o deployment para depois criar o service.
-```
+### Kubernetes useful commands
 
 ### Kubectl get commands
 
 ```
 kubectl get nodes - Lista todos os nodes no cluster
 kubectl get namespaces - Lista todos os namespaces disponíveis no cluster
-kubectl get pod -n [nome_namespace] - Lista todos os pods no namespace desejado
-kubectl get pods --all-namespaces -o wide - Lista os pods de todos os namespaces com
-maiores informações
+kubectl get pod -n devops - Lista todos os pods no namespace desejado
+kubectl get pods --all-namespaces -o wide - Lista os pods de todos os namespaces com maiores informações
 kubectl get services - Lista todos services no namespace
 kubectl get events - Lista os eventos do cluster
 kubectl get all - Lista todos os recursos recém criados
