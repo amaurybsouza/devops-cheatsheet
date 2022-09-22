@@ -7,7 +7,7 @@ The DevOps cheat sheet is a list with the most commonly and used commands for ea
 You can update the cheat sheet following the model below:
 
 
-##### kubectl describe commands
+##### kubectl describe commandss
 ```
 kubectl describe node - lista os dados e status do node desejado
 kubectl describe service - lista os detalhes do service desejado
