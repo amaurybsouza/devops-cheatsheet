@@ -64,4 +64,16 @@ docker node rm (remove um node)
 docker swarm leave (para que o node saia do cluster)
 docker swarm leave --force (para que um node manager saia do cluster)
 ```
+ 
+### Manage Containers
 
+```
+docker container ls - show a list of containers
+docker container ls -a - show a list of all containers
+docker container rm app - delete the container
+docker container rm -f app - delete a running container
+docker container prune - delete stopped containers
+docker container stop app - stop a running container
+docker container start app - start a stopped container
+docker container cp app:/index.html index.html
+```
