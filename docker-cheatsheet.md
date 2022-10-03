@@ -1,6 +1,4 @@
-## Docker cheatsheet for DevOps community
-
-### `Install Docker`
+## Install Docker
 
 ```
 curl -fsSl https://get.docker.com | bash (faz a instalacao do Docker via script)
@@ -10,20 +8,7 @@ docker container run hellow-world (executa um container)
 docker container run -ti hello-world (executa um container)
 ```
 
-### `Troubleshooting`
-
-```
-- docker start failed after adding daemon.json file
-{
-    "exec-opts": ["native.cgroupdriver=systemd"],
-    "log-driver": "json-file",
-    "log-opts": {
-      "max-size": "100m"
-    }
-  }
-```
-
-### `Basic commands`
+## `Basic commands`
 
 ```
 docker container run (executa um container)
@@ -54,7 +39,7 @@ $ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/v
 $ docker volume inspect teste (inspecionar um volume criado)
 ```
 
-### `Services`
+#### Manage Services
 ```
 docker service create (cria um service)
 docker service ls (lista um service)
@@ -65,7 +50,7 @@ docker service logs (mostra os logs de um service)
 docker service rm (remove um service)
 ```
 
-### `Swarm`
+### Manage Swarm
 ```
 docker swarm init (inicia um cluster de swarm)
 docker swarm join (comando para adicionar novos nodes ao cluster)
@@ -79,3 +64,4 @@ docker node rm (remove um node)
 docker swarm leave (para que o node saia do cluster)
 docker swarm leave --force (para que um node manager saia do cluster)
 ```
+
