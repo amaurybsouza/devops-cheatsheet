@@ -1,7 +1,6 @@
 ## Ansible Ad-hoc Commands
 
 ### Ad-hoc Basics
-
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
 ansible [all_servers] -a hostname - Printa todos os hostnames dos servidores
@@ -15,7 +14,6 @@ ansible prod -b -m shell -a "ls -l /var/log/audit | tail -n 15" -i inventory.yml
 ```
 
 ### Ad-hoc File Transfer
-
 ```
 ansible [server] -m copy -a "src=/etc/hosts dest=/tmp/hosts" - Copia o arquivo para outro servidor desejado
 ansible [server] -m file -a "dest=/srv/foo/a.txt mode=600" - Para mudar as permissões de um arquivo no servidor remoto
@@ -25,15 +23,13 @@ ansible [server] -m file -a "dest=/path/to/c state=absent" - Para desinstalar um
 ```
 
 ### Ad-hoc Manage services
-
 ```
 ansible [server] -m service -a "name=httpd state=started" - Inicia o service desejado.
 ansible [server] -m service -a "name=httpd state=restarted" - Restarta o service desejado.
 ansible [server] -m service -a "name=httpd state=stopped" - Pausa o service desejado.
 ```
 
-### `Ad-hoc [Manage packages]`
-
+### Ad-hoc Manage packages
 ```
 ansible [server] -m apt -a "name=giropops state=present" - Instala o pacote desejado no servidor
 ansible [server] -m apt -a "name=giropops-1.2 state=present" - Instala o pacote com a versão desejada
@@ -41,16 +37,14 @@ ansible [server] -m apt -a "name=giropops state=latest" - Instala a última vers
 ansible [server] -m apt -a "name=giropops state=absent" - Desinstala o pacote desejado no servidor
 ```
 
-### `Ad-hoc [Rebooting servers]`
-
+### Ad-hoc Rebooting servers
 ```
 ansible atlanta -a "/sbin/reboot" - To reboot all the servers in the [atlanta] group
 ansible atlanta -a "/sbin/reboot" -f 10 - To reboot the [atlanta] servers with 10 parallel forks:
 ansible atlanta -a "/sbin/reboot" -f 10 -u username - To connect as a different user
 ```
 
-### `Ad-hoc [Create user and groups]`
-
+### Ad-hoc Create user and groups
 ```
 ansible [server] -s -m group -a "name=admin state=present" - Cria um grupo no servidor remoto
 ansible [server] -s -m user -a "name=giropops group=admin createhome=yes" - Cria um usuário do grupo no servidor remoto
@@ -61,8 +55,7 @@ ansible [server] -s -m user -a "name=giropops state=absent" - Deleta um usuário
 
 ## Ansible Playbooks
 
-### `Ansible playbooks [Verifying playbooks]`
-
+### Ansible playbooks Verifying playbooks
 ```
 ansible-playbook playbook.yml --list-hosts - lista todos os hosts afetados nesse playbook
 ansible-playbook playbook.yml --check - executa o playbook em modo de check sem dar apply 
