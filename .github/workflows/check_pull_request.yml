@@ -1,0 +1,19 @@
+on: pull_request
+#need to add a permissions for write mode
+jobs:
+  example_comment_pr:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    name: An example job to comment a PR
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          #a basic message for a pull request
+          message: |
+            I appreciate your updates! :wave:
+          reactions: eyes, rocket
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
