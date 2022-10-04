@@ -1,5 +1,5 @@
 ## DevOps Cheat-sheet
-This DevOps cheatsheet helps you with the most commonly and used commands, for easy reference like Linux, Ansible, Terraform, Docker, Kubernetes, AWS Cloud, Git, Gitlab and olthers (constantly updating).a
+This DevOps cheatsheet helps you with the most commonly and used commands, for easy reference like Linux, Ansible, Terraform, Docker, Kubernetes, AWS Cloud, Git, Gitlab and olthers (constantly updating).
 
 ## Usage
 You can update the cheatsheet following the model below. Feel free to add a command in portuguese mode or in english. Make sure you have matched with the model below and apply your commands.
