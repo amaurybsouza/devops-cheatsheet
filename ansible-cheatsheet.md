@@ -1,6 +1,6 @@
-## Ansible Ad-hoc commands
+## Ansible Ad-hoc Commands
 
-### `Ad-hoc [Basics]`
+### Ad-hoc Basics
 
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
@@ -14,7 +14,7 @@ ansible prod -b -m shell -a "rm -rf /var/cache/yum/" -i inventory.yml - remove o
 ansible prod -b -m shell -a "ls -l /var/log/audit | tail -n 15" -i inventory.yml - executa o comando de listar arquivos no host remoto
 ```
 
-### `Ad-hoc [File Transfer]`
+### Ad-hoc File Transfer
 
 ```
 ansible [server] -m copy -a "src=/etc/hosts dest=/tmp/hosts" - Copia o arquivo para outro servidor desejado
@@ -24,7 +24,7 @@ ansible [server] -m file -a "dest=/path/to/c mode=755 owner=example group=exampl
 ansible [server] -m file -a "dest=/path/to/c state=absent" - Para desinstalar um pacote no servidor remoto
 ```
 
-### `Ad-hoc [Manage services]`
+### Ad-hoc Manage services
 
 ```
 ansible [server] -m service -a "name=httpd state=started" - Inicia o service desejado.
