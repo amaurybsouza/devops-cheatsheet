@@ -1,0 +1,75 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+
+    - name: Baixando binario do minikube
+      ansible.builtin.get_url:
+        url: https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+        dest: /tmp/
+
+    - name: Install minikube .deb package
+      ansible.builtin.apt:
+        deb: /tmp/minikube_latest_amd64.deb
+
+    - name: Baixando binario do kubectl
+      ansible.builtin.get_url:
+        url: https://dl.k8s.io/release/v1.23.0/bin/linux/amd64/kubectl
+        dest: /tmp/
+     
+    - name: Instalando binario do kubectl
+      shell: install -o root -g root -m 0755 /tmp/kubectl /usr/local/bin/kubectl
+
+    - name: Adiciona uma chave de assinatura apt para o Docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Adiciona repositorio apt para versao estavel
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+        state: present
+
+    - name: Instala o Docker e mais alguns pacotes
+      apt:
+        name: "{{ packages }}"
+        state: present
+        update_cache: yes
+      vars:
+        packages:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io 
+        - conntrack
+        - apt-transport-https
+        - python3
+        - python3-pip
+      
+
+    - name: Start Docker, if not started
+      ansible.builtin.service:
+        name: docker
+        state: started
+    
+    - name: Instala o helm
+      snap:
+        name: helm
+        classic: yes
+
+    - name: install pre-requisites
+      pip:
+        name:
+          - openshift
+          - pyyaml
+          - kubernetes
+     
+    - name: Desativando swap
+      shell: swapoff -a
+
+    - name: Inicializando minikube
+      shell: minikube start --driver=none --kubernetes-version v1.22.12
+
+
+    
