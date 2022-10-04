@@ -1,6 +1,6 @@
 ## The Git cheatsheet for DevOps community
 
-### `Git Basic commands`
+### Git Basic commands
 
 ```
 git config --global user.name "[username]" - Configura seu username do Git
@@ -11,7 +11,7 @@ git config --system core.editor vim - Configura o editor de texto padrao
 git config --global --edit - Abre o arquivo  que contem usuario e email setados
 ```
 
-### `Git Branch Managing`
+### Git Branch Managing
 
 ```
 git branch - Lista todas as branchs locais do repositório
@@ -23,7 +23,7 @@ git branch -m [nome_novo] - Muda o nome da branch atual
 git merge [branch] - Faz o merge da branch atual para a branch desejada
 ```
 
-### `Git Repository Setup`
+### Git Repository Setup
 
 ```
 git init [diretório] - Cria um novo repositório Git apartir de um diretório existente
@@ -39,7 +39,7 @@ git reset [commit] - Desfaz todos os commits apartir do commit especificado
 git reset --hard [commit] - Discarta todo histórico e mudanças para o commit especificado
 ```
 
-### `Git File Managing`
+### Git File Managing
 
 ```
 git status - Mostra o status do diretório atual
