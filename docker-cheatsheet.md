@@ -1,4 +1,17 @@
-## Install Docker
+### Run a new container
+```
+docker container run - start a new container from an image
+docker container run -- name app nginx - assign a name for the container
+docker container run -p 8080:80 nginx - map a por os container
+docker container run -P nginx - map all the ports
+docker container run -d nginx - start a container in background
+docker container run --hostname srv nginx - assign a hostname
+docker container run --add-host HOSTNAME:IP IMAGE - add a DNS entry
+docker container run -v ~/:/usr/share/nginx/html nginx - map a local directory into the container
+docker container run -ti  --entrypoint bash nginx - change the entrypoint
+```
+
+### Basic Docker Commands
 
 ```
 curl -fsSl https://get.docker.com | bash (faz a instalacao do Docker via script)
@@ -8,32 +21,7 @@ docker container run hellow-world (executa um container)
 docker container run -ti hello-world (executa um container)
 ```
 
-## `Basic commands`
-
-```
-docker container run (executa um container)
-"Ctrl + p + q" (para sair do container sem matar o container)
-docker container ls (lista os containers em execucao)
-docker container ls -a * (lista os containers que estao ocultos)
-docker container inspect (mostra detalhes de um container)
-docker run -it ubuntu bash (executa um container com a imagem do Ubuntu)
-opcao -ti (ja iremos cair dentro do container, ele me dara um terminal + interacao para esse container)
-docker container attach great_snyder (para eu acessar novamente o container, usando o nome ou o ID)
-docker container run -d nginx (executa um container em modo daemon, seja iniciado em background)
-docker container exec 26484f95efd1 ls / (conecta dentro do container do nginx e roda um "ls" no / do sistema)
-docker container exec -ti 26484f95efd1 bash (vou me conectar nesse container)
-docker container stop 26484f95efd1 (parando um container)
-docker container start 26484f95efd1 (iniciando um container)
-docker container restart 26484f95efd1 (restartando um container)
-docker container rm (remove um container)
-docker container rm -f (remove um container em execucao)
-docker container top festive_lumiere (mostra os processos em execucao)
-docker container stats (mostra informacoes de consumo de recursos como CPU/Memoria)
-docker container run -d -m 64M --cpus 0.5 nginx (executa um cintainer com limite de CPU/Memoria)
-docker container cp festive_lumiere:/app/app.js /tmp (copia um file do container rodando para o /tmp da minha maquina)
-```
-
-### `Volumes`
+### Manage Volumes
 ```
 $ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/var/www/html --rm phpmessages (executando um container com volume)
 $ docker volume inspect teste (inspecionar um volume criado)
@@ -66,7 +54,6 @@ docker swarm leave --force (para que um node manager saia do cluster)
 ```
  
 ### Manage Containers
-
 ```
 docker container ls - show a list of containers
 docker container ls -a - show a list of all containers
