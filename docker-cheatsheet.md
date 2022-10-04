@@ -1,14 +1,14 @@
 ### Run a new container
 ```
-docker container run - start a new container from an image
-docker container run -- name app nginx - assign a name for the container
-docker container run -p 8080:80 nginx - map a por os container
-docker container run -P nginx - map all the ports
-docker container run -d nginx - start a container in background
-docker container run --hostname srv nginx - assign a hostname
-docker container run --add-host HOSTNAME:IP IMAGE - add a DNS entry
-docker container run -v ~/:/usr/share/nginx/html nginx - map a local directory into the container
-docker container run -ti  --entrypoint bash nginx - change the entrypoint
+docker container run (start a new container from an image)
+docker container run -- name app nginx (assign a name for the container)
+docker container run -p 8080:80 nginx (map a por os container)
+docker container run -P nginx (map all the ports)
+docker container run -d nginx (start a container in background)
+docker container run --hostname srv nginx (assign a hostname)
+docker container run --add-host HOSTNAME:IP IMAGE (add a DNS entry)
+docker container run -v ~/:/usr/share/nginx/html nginx (map a local directory into the container)
+docker container run -ti  --entrypoint bash nginx (change the entrypoint)
 ```
 
 ### Basic Docker Commands
