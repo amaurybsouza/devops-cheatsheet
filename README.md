@@ -4,7 +4,7 @@ This DevOps cheatsheet helps you with the most commonly and used commands, for e
 ## Usage
 You can update the cheatsheet following the model below. Feel free to add a command in portuguese mode or in english. Make sure you have matched with the model below and apply your commands.
 
-## Manage kubectl Describe
+## Manage `kubectl describe` Command
 ```
 kubectl describe node (lista os dados e status do node desejado)
 kubectl describe service (lista os detalhes do service desejado)
