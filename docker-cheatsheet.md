@@ -30,7 +30,7 @@ $ docker container run -d -p 80:80 --name phpmessage_container -v volumeteste:/v
 $ docker volume inspect teste (inspecionar um volume criado)
 ```
 
-#### Manage Services
+### Manage Services
 ```
 docker service create (cria um service)
 docker service ls (lista um service)
@@ -66,4 +66,34 @@ docker container prune - delete stopped containers
 docker container stop app - stop a running container
 docker container start app - start a stopped container
 docker container cp app:/index.html index.html
+```
+
+## Docker Compose
+
+### Basic example
+```
+# docker-compose.yml
+version: '2'
+
+services:
+  web:
+    build: .
+    # build from Dockerfile
+    context: ./Path
+    dockerfile: Dockerfile
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/code
+  redis:
+    image: redis
+```
+
+### Docker Compose Commands
+```
+docker-compose start (start the services)
+docker-compose stop (stop the services)
+docker-compose ps (list the containers)
+docker-compose up (create and start the containers)
+docker-compose down (stop and remove the resources)
 ```
