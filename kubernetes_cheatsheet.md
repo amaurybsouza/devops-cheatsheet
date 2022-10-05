@@ -1,5 +1,5 @@
 
-### Kubernetes useful commands
+## Kubernetes 
 
 ### Kubectl get commands
 
@@ -65,7 +65,7 @@ $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
 ```
 
 ### Kubernetes on VirtualBOX
-#### `Master`
+Master
 ```
     2  apt update
     3  yum update
@@ -133,7 +133,7 @@ $ kubectl get pods - mostra os pods que eu tenho disponivel no Kubernetes
    77  kubectl get pods -n kube-system
    78  kubectl get nodes
 ```
-#### `Cluster nodes`
+### Cluster nodes
 ```
     2  apt update
     3  yum update

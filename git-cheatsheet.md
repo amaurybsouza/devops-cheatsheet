@@ -1,4 +1,4 @@
-## The Git cheatsheet for DevOps community
+## The Git cheatsheet 
 
 ### Git Basic commands
 
