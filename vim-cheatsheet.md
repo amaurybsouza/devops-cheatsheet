@@ -1,4 +1,6 @@
-### `Basic navegation`
+## VIM 
+
+### Basic navegation
 
 ```
 h - Move o cursor pra esquerda
@@ -25,7 +27,7 @@ ctrl + u - Page Up
 ctrl + d - Page Down
 ```
 
-### `Basic commands`
+### Basic commands
 
 ```
 yy - Copia a linha toda
@@ -41,7 +43,7 @@ d$ - Deleta de onde o cursor está até o final da linha
 x - Deleta um caractere
 ```
 
-### `Saved and exit commands`
+### Saved and exit commands
 
 ```
 :w - Salva o arquivo
