@@ -1,6 +1,6 @@
-## Linux cheatsheet for DevOps community
+## Linux
 
-### `Linux servers`
+### Linux servers
 
 ```bash
 $ hostnamectl set-hostname your-new-hostname (para alterar o nome da maquineta no CentOS)
@@ -8,7 +8,7 @@ $ ssh-keygen (comando usado para gerar autenticacao SSH)
 $ ssh-copy-id amaury@192.168.2.102 (copia a chave pública para o servidor remoto)
 ```
 
-### `Basic commands`
+### Basic commands
 
 ```
 pwd (Mostra em qual diretorio você está)
@@ -89,7 +89,7 @@ alien -r zsh_5.1.1-3_amd64.deb  (transforma esse pacote .deb em um pacote rpm pa
 alien -i zsh-5.1.1-4.x86_64.rpm (instala o pacote, o sistema debian instala o pacote rpm, executa o dpkg)
 ```
 
-### `Regular expressions`
+### Regular expressions
 
 ```
 grep -c Linux (procura por todas os arquivos dentro desse diretórioe mostra as ocorrências de Linux nos arquivos).
@@ -104,13 +104,13 @@ Opções do comando grep
 -n: exibe o número de linhas que contem o padrão.
 ```
 
-### `Miscelanious commands`
+### Miscelanious commands
 
 ```
 $ echo Hello There | tr [:lower:] [:upper:]
 ```
 
-### `Linux installation`
+### Linux installation
 
 ```
 / (root) filesystem
@@ -120,7 +120,7 @@ $ echo Hello There | tr [:lower:] [:upper:]
 swap space (é usado no windows, linux, espaço no hd que serve para uma ram temporária caso a ram principal fique completamente cheia)
 ```
 
-### `Partitions`
+### Partitions
 
 ```
 - partições comuns:
@@ -136,7 +136,7 @@ swap space (é usado no windows, linux, espaço no hd que serve para uma ram tem
   /sbin  (ficam os comandos, scripts, para ver as partições, ver os diretórios, processos do sistema)
 ```
 
-### `Systems variables`
+### Systems variables
 
 ```
 HISTFILE=/root/.bash_history  (caminho que armazena os comandos feitos no terminal)
@@ -152,7 +152,7 @@ TERM=xterm-256color (mostra qual terminal estamos usando)
 USER=root (mostra o nome do usuário atual)
 ```
 
-### `Networks commands`
+### Networks commands
 
 ```
 /etc/services (mostra todas as listagens de portas públicas do Linux e os serviços que rodam essas portas)
