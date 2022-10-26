@@ -27,7 +27,7 @@ ctrl + u - Page Up
 ctrl + d - Page Down
 ```
 
-### Basic commands
+### Basic commandss
 
 ```
 yy - Copia a linha toda
