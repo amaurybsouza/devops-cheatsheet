@@ -75,7 +75,35 @@ Terraform will perform the following actions:
 ```
 </p></details>
 
+</p></details>
+<details><summary>$ terraform apply "jenkins-environment"</summary><p>
 
+```yml
+aws_key_pair.key: Creating...
+aws_vpc.my_vpc: Creating...
+aws_key_pair.key: Creation complete after 1s [id=aws-test]
+aws_vpc.my_vpc: Creation complete after 7s [id=vpc-0f57adc94dedf1e2d]
+aws_internet_gateway.my_intrnet_gateway: Creating...
+aws_subnet.my_subnet: Creating...
+aws_security_group.my_security_group: Creating...
+aws_subnet.my_subnet: Creation complete after 3s [id=subnet-0207c968bc4a5d243]
+aws_internet_gateway.my_intrnet_gateway: Creation complete after 3s [id=igw-081c5fb96037c5856]
+aws_route_table.my_route_table: Creating...
+aws_route_table.my_route_table: Creation complete after 4s [id=rtb-003bc9830826feb5c]
+aws_route_table_association.my_rta: Creating...
+aws_security_group.my_security_group: Creation complete after 8s [id=sg-090cd63457b8bc2b1]
+aws_instance.web: Creating...
+aws_route_table_association.my_rta: Creation complete after 3s [id=rtbassoc-06b0648b1910360a0]
+aws_instance.web: Still creating... [10s elapsed]
+aws_instance.web: Still creating... [20s elapsed]
+aws_instance.web: Still creating... [30s elapsed]
+aws_instance.web: Creation complete after 40s [id=i-02e61dd913939b830]
+
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed
+```
+</p></details>
+
+</p></details>
 
 
 ## All other commands
