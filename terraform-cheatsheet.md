@@ -1,15 +1,14 @@
-## Terraform
+# Terraform Commands
 
-### Terraform main commands
-
+## Terraform main commands
 
 - `terraform init` - prepare your working directory for other commands
 - `terraform validate` - check whether the configuration is valid
-terraform plan - show changes required by the current configuration
-terraform apply - create or update infrastructure
-terraform destroy - destroy previously-created infrastructure
+- `terraform plan` - show changes required by the current configuration
+- `terraform apply` - create or update infrastructure
+- `terraform destroy` - destroy previously-created infrastructure
 
-### All other commands
+## All other commands
 
 ```
 terraform console - Try Terraform expressions at an interactive command prompt
@@ -31,7 +30,7 @@ terraform  version - Show the current Terraform version
 terraform  workspace - Workspace management
 ```
 
-### Global options
+## Global options
 
 ```
 terraform -help - Show this help output, or the help for a specified subcommand.
