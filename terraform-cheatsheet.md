@@ -3,6 +3,9 @@
 ## Terraform main commands
 
 - `terraform init` - prepare your working directory for other commands
+  - `terraform init -migrate-state` - copy existing state to the new backend
+  - `terraform init -reconfigure` - disregards any existing configuration.
+  - `terraform init -upgrade` - Upgrade all previously-selected plugins to the newest version 
 - `terraform validate` - check whether the configuration is valid
 - `terraform plan` - show changes required by the current configuration
   - `terraform plan -destroy` - other way to plan the destroy cycle.
