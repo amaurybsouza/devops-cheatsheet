@@ -3,8 +3,8 @@
 ### Terraform main commands
 
 
-`terraform init` - prepare your working directory for other commands
-`terraform validate` - check whether the configuration is valid
+- `terraform init` - prepare your working directory for other commands
+- `terraform validate` - check whether the configuration is valid
 terraform plan - show changes required by the current configuration
 terraform apply - create or update infrastructure
 terraform destroy - destroy previously-created infrastructure
