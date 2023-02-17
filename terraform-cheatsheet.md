@@ -5,8 +5,11 @@
 - `terraform init` - prepare your working directory for other commands
 - `terraform validate` - check whether the configuration is valid
 - `terraform plan` - show changes required by the current configuration
+  - `terraform plan -destroy` - other way to plan the destroy cycle.
+  - `terraform plan -out=my-environment` - you can save the state plan to this file
 - `terraform apply` - create or update infrastructure
 - `terraform destroy` - destroy previously-created infrastructure
+  - `terraform apply -destroy` - alias to destroy the infrastructure.
 
 ## Terraform main commands details
 </p></details>
