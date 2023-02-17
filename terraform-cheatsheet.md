@@ -8,7 +8,7 @@
 - `terraform apply` - create or update infrastructure
 - `terraform destroy` - destroy previously-created infrastructure
 
-## Terrafor main commands details
+## Terraform main commands details
 </p></details>
 
 <details><summary>$ terraform init</summary><p>
@@ -103,6 +103,19 @@ Apply complete! Resources: 8 added, 0 changed, 0 destroyed
 ```
 </p></details>
 
+</p></details>
+<details><summary>$ terraform destroy</summary><p>
+
+```yml
+aws_key_pair.key: Refreshing state... [id=aws-test]
+aws_vpc.my_vpc: Refreshing state... [id=vpc-0f57adc94dedf1e2d]
+aws_internet_gateway.my_intrnet_gateway: Refreshing state... [id=igw-081c5fb96037c5856]
+aws_subnet.my_subnet: Refreshing state... [id=subnet-0207c968bc4a5d243]
+aws_security_group.my_security_group: Refreshing state... [id=sg-090cd63457b8bc2b1]
+aws_route_table.my_route_table: Refreshing state... [id=rtb-003bc9830826feb5c]
+aws_instance.web: Refreshing state... [id=i-02e61dd913939b726]
+aws_route_table_association.my_rta: Refreshing state... [id=rtbassoc-06b0648b1910360a0]
+```
 </p></details>
 
 
