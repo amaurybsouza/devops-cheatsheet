@@ -71,5 +71,64 @@
     - name: Inicializando minikube
       shell: minikube start --driver=none --kubernetes-version v1.22.12
 
+## Ansible playbook that prepares a Linux machine for a web server
+---
+- name: Prepare Linux machine for web server
+  hosts: homelab
+  become: true
+  vars:
+    packages:
+      - nginx
+      - ufw
+      - fail2ban
+      - python3-pip
+    firewall_ports:
+      - 80/tcp
+      - 443/tcp
+  tasks:
+    - name: Install packages
+      apt:
+        name: "{{ packages }}"
+        state: present
+    - name: Enable firewall ports
+      ufw:
+        rule: allow
+        port: "{{ firewall_ports }}"
+    - name: Configure fail2ban
+      copy:
+        src: files/fail2ban/jail.local
+        dest: /etc/fail2ban/
+        mode: '0644'
+      notify:
+        - restart fail2ban
+    - name: Copy nginx config
+      copy:
+        src: files/nginx/nginx.conf
+        dest: /etc/nginx/nginx.conf
+        mode: '0644'
+      notify:
+        - restart nginx
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+    - name: restart fail2ban
+      service:
+        name: fail2ban
+        state: restarted
+
+## Example playbook that copies a file from the local machine to a remote host:
+---
+- name: Copy file to remote host
+  hosts: homelab
+  become: true
+  tasks:
+    - name: Copy file
+      copy:
+        src: /path/to/local/file
+        dest: /path/to/remote/file
+        mode: 0644
+
 
     
