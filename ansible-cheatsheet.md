@@ -7,6 +7,7 @@ The hosts file typically contains the IP addresses or hostnames of the remote ma
   
 ```bash
 [local]
+#ensure you have your own machine to manage with Ansible
 127.0.0.1 ansible_connection=local
 ```
 
