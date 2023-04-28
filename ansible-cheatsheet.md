@@ -4,7 +4,6 @@
 The hosts file typically contains the IP addresses or hostnames of the remote machines, along with some configuration information, such as the username and password required for authentication. Ansible uses the information in the hosts file to connect to the remote machines, run commands, and apply configurations.
 
 - Below you can check a basic way to set the localhost into the Ansible hosts file
-  
 ```bash
 [local]
 #ensure you have your own machine to manage with Ansible
@@ -12,7 +11,6 @@ The hosts file typically contains the IP addresses or hostnames of the remote ma
 ```
 
 - Below you can check a basic way to set your `homelab` into the file:
-
 ```bash
 [devops-lab]
 192.168.1.110 ansible_ssh_user=devopslab ansible_password=password
