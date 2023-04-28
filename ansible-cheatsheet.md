@@ -16,11 +16,15 @@ The hosts file typically contains the IP addresses or hostnames of the remote ma
 192.168.1.110 ansible_ssh_user=devopslab ansible_password=password
 ```
 
+- Below you can check a basic way to set your AWS EC2 instances into the file:
+```
+[aws]
+target1 ansible_ssh_user=ubuntu ansible_ssh_host=18.213.245.111  ansible_ssh_private_key_file=aws-key
+```
 
+Please feel free to ge the Ansible Hosts file [here](https://github.com/ansible/ansible/blob/devel/examples/hosts.yaml).
 
-
-
-### Ad-hoc Basics
+## Ad-hoc Basics
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
 ansible [all_servers] -a hostname - Printa todos os hostnames dos servidores
