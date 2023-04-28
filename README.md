@@ -53,19 +53,13 @@ Playbooks are written in YAML format. Playbooks are executed with the `ansible-p
 - module: The Ansible module to be used for this task.
 - args: The arguments to be passed to the module.
 
-
+## Handlers
+- Handlers are a special type of task that are only executed when notified by other tasks.
+- Handlers are defined at the bottom of a playbook, after all tasks have been defined.
+- Handlers are notified by tasks using the `notify` keyword.
 
 ## Usage
 You can update the cheatsheet following the model below. Feel free to add a command in portuguese mode or in english. Make sure you have matched with the model below and apply your commands.
-
-## Manage `kubectl describe` Command
-```
-kubectl describe node (lista os dados e status do node desejado)
-kubectl describe service (lista os detalhes do service desejado)
-kubectl describe pod (lista os dados e status do pod desejado)
-kubectl describe endpoints (lista os dados do EndPoint desejado)
-kubectl describe replicaset (lista os dados do ReplicaSet desejado)
-```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
