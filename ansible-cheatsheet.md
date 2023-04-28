@@ -1,4 +1,16 @@
-## Ansible Ad-hoc Commands
+# Ansible Cycle
+
+## Ansible Hosts
+The hosts file typically contains the IP addresses or hostnames of the remote machines, along with some configuration information, such as the username and password required for authentication. Ansible uses the information in the hosts file to connect to the remote machines, run commands, and apply configurations.
+
+- Below you can check a basic way to set the localhost into te Ansible hosts:
+  
+[local]
+127.0.0.1 ansible_connection=local
+
+
+
+
 
 ### Ad-hoc Basics
 ```
