@@ -1,4 +1,5 @@
 # Ansible Cycle
+Ansible is an open-source configuration management and automation tool that allows users to manage and deploy software applications and infrastructure at scale. It was created by Michael DeHaan in 2012 and is now maintained by Red Hat.
 
 ## Ansible Hosts
 The hosts file typically contains the IP addresses or hostnames of the remote machines, along with some configuration information, such as the username and password required for authentication. Ansible uses the information in the hosts file to connect to the remote machines, run commands, and apply configurations.
@@ -25,6 +26,8 @@ target1 ansible_ssh_user=ubuntu ansible_ssh_host=18.213.245.111  ansible_ssh_pri
 Please feel free to ge the Ansible Hosts file [here](https://github.com/ansible/ansible/blob/devel/examples/hosts.yaml).
 
 ## Ad-hoc Basics
+In Ansible, an ad-hoc command is a one-time, on-demand command that you can run on one or more remote hosts without having to write a playbook. It allows you to perform quick, simple tasks such as checking the uptime of a host, installing a package, or copying a file, without the need for a full-blown playbook.
+
 ```
 ansible [all_servers] -m ping - Verifica se todos os servidores estão funcionando
 ansible [all_servers] -a hostname - Printa todos os hostnames dos servidores
