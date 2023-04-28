@@ -11,6 +11,13 @@ The hosts file typically contains the IP addresses or hostnames of the remote ma
 127.0.0.1 ansible_connection=local
 ```
 
+- Below you can check a basic way to set your `homelab` into the file:
+
+```bash
+[devops-lab]
+192.168.1.110 ansible_ssh_user=devopslab ansible_password=password
+```
+
 
 
 
