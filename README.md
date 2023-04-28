@@ -1,6 +1,8 @@
 # DevOps Cheat-sheet
 This DevOps cheatsheet helps you with the most commonly and used commands, for easy reference like Linux, Ansible, Terraform, Docker, Kubernetes, AWS Cloud, Git, Gitlab and olthers (constantly updating).
 
+Cheat sheets are designed to help users memorize and recall essential information quickly, making them an efficient way to learn and use new technologies. Cheat sheets are available for various technologies, including programming languages, operating systems, databases, network protocols, and software applications. 
+
 ## Ansible Ad-Hoc Commands
 - Ping all hosts: `ansible all -m ping`
 - Run a shell command on all hosts: `ansible all -a "/bin/echo hello"`
