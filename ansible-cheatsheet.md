@@ -6,6 +6,7 @@ The hosts file typically contains the IP addresses or hostnames of the remote ma
 - Below you can check a basic way to set the localhost into the Ansible hosts file
   
 ```bash
+[local]
 127.0.0.1 ansible_connection=local
 ```
 
